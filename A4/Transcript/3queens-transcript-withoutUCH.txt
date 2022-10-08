@@ -1,0 +1,278 @@
+./dpll KB/3queens.cnf -UCH
+*** DPLL ***
+0. Q11 Q21 Q31 
+1. Q12 Q22 Q32 
+2. Q13 Q23 Q33 
+3. Q11 Q12 Q13 
+4. Q21 Q22 Q23 
+5. Q31 Q32 Q33 
+6. -Q11 -Q21 
+7. -Q11 -Q31 
+8. -Q21 -Q31 
+9. -Q12 -Q22 
+10. -Q12 -Q32 
+11. -Q22 -Q32 
+12. -Q13 -Q23 
+13. -Q13 -Q33 
+14. -Q23 -Q33 
+15. -Q11 -Q12 
+16. -Q11 -Q13 
+17. -Q12 -Q13 
+18. -Q21 -Q22 
+19. -Q21 -Q23 
+20. -Q22 -Q23 
+21. -Q31 -Q32 
+22. -Q31 -Q33 
+23. -Q32 -Q33 
+24. -Q11 -Q22 
+25. -Q11 -Q33 
+26. -Q12 -Q21 
+27. -Q12 -Q23 
+28. -Q13 -Q22 
+29. -Q13 -Q31 
+30. -Q21 -Q32 
+31. -Q22 -Q31 
+32. -Q22 -Q33 
+33. -Q23 -Q32 
+...tracing info...
+
+Running without Unit Clause Heuristic
+
+Q11=? Q21=? Q31=? Q12=? Q22=? Q32=? Q13=? Q23=? Q33=? 
+true props: 
+Amount of clauses satisfied: 0/34
+Try Q11 = false
+
+Q11=F Q21=? Q31=? Q12=? Q22=? Q32=? Q13=? Q23=? Q33=? 
+true props: 
+Amount of clauses satisfied: 6/34
+Try Q21 = false
+
+Q11=F Q21=F Q31=? Q12=? Q22=? Q32=? Q13=? Q23=? Q33=? 
+true props: 
+Amount of clauses satisfied: 11/34
+Try Q31 = false
+
+Q11=F Q21=F Q31=F Q12=? Q22=? Q32=? Q13=? Q23=? Q33=? 
+true props: 
+Amount of clauses satisfied: 15/34
+back-tracking...
+Try Q31 = true
+
+Q11=F Q21=F Q31=T Q12=? Q22=? Q32=? Q13=? Q23=? Q33=? 
+true props: Q31 
+Amount of clauses satisfied: 13/34
+Try Q12 = false
+
+Q11=F Q21=F Q31=T Q12=F Q22=? Q32=? Q13=? Q23=? Q33=? 
+true props: Q31 
+Amount of clauses satisfied: 17/34
+Try Q22 = false
+
+Q11=F Q21=F Q31=T Q12=F Q22=F Q32=? Q13=? Q23=? Q33=? 
+true props: Q31 
+Amount of clauses satisfied: 22/34
+Try Q32 = false
+
+Q11=F Q21=F Q31=T Q12=F Q22=F Q32=F Q13=? Q23=? Q33=? 
+true props: Q31 
+Amount of clauses satisfied: 25/34
+back-tracking...
+Try Q32 = true
+
+Q11=F Q21=F Q31=T Q12=F Q22=F Q32=T Q13=? Q23=? Q33=? 
+true props: Q31 Q32 
+Amount of clauses satisfied: 23/34
+back-tracking...
+Try Q22 = true
+
+Q11=F Q21=F Q31=T Q12=F Q22=T Q32=? Q13=? Q23=? Q33=? 
+true props: Q31 Q22 
+Amount of clauses satisfied: 19/34
+back-tracking...
+Try Q12 = true
+
+Q11=F Q21=F Q31=T Q12=T Q22=? Q32=? Q13=? Q23=? Q33=? 
+true props: Q31 Q12 
+Amount of clauses satisfied: 15/34
+Try Q22 = false
+
+Q11=F Q21=F Q31=T Q12=T Q22=F Q32=? Q13=? Q23=? Q33=? 
+true props: Q31 Q12 
+Amount of clauses satisfied: 21/34
+Try Q32 = false
+
+Q11=F Q21=F Q31=T Q12=T Q22=F Q32=F Q13=? Q23=? Q33=? 
+true props: Q31 Q12 
+Amount of clauses satisfied: 25/34
+Try Q13 = false
+
+Q11=F Q21=F Q31=T Q12=T Q22=F Q32=F Q13=F Q23=? Q33=? 
+true props: Q31 Q12 
+Amount of clauses satisfied: 29/34
+Try Q23 = false
+
+Q11=F Q21=F Q31=T Q12=T Q22=F Q32=F Q13=F Q23=F Q33=? 
+true props: Q31 Q12 
+Amount of clauses satisfied: 31/34
+back-tracking...
+Try Q23 = true
+
+Q11=F Q21=F Q31=T Q12=T Q22=F Q32=F Q13=F Q23=T Q33=? 
+true props: Q31 Q12 Q23 
+Amount of clauses satisfied: 31/34
+back-tracking...
+Try Q13 = true
+
+Q11=F Q21=F Q31=T Q12=T Q22=F Q32=F Q13=T Q23=? Q33=? 
+true props: Q31 Q12 Q13 
+Amount of clauses satisfied: 26/34
+back-tracking...
+Try Q32 = true
+
+Q11=F Q21=F Q31=T Q12=T Q22=F Q32=T Q13=? Q23=? Q33=? 
+true props: Q31 Q12 Q32 
+Amount of clauses satisfied: 21/34
+back-tracking...
+Try Q22 = true
+
+Q11=F Q21=F Q31=T Q12=T Q22=T Q32=? Q13=? Q23=? Q33=? 
+true props: Q31 Q12 Q22 
+Amount of clauses satisfied: 16/34
+back-tracking...
+Try Q21 = true
+
+Q11=F Q21=T Q31=? Q12=? Q22=? Q32=? Q13=? Q23=? Q33=? 
+true props: Q21 
+Amount of clauses satisfied: 8/34
+Try Q31 = false
+
+Q11=F Q21=T Q31=F Q12=? Q22=? Q32=? Q13=? Q23=? Q33=? 
+true props: Q21 
+Amount of clauses satisfied: 13/34
+Try Q12 = false
+
+Q11=F Q21=T Q31=F Q12=F Q22=? Q32=? Q13=? Q23=? Q33=? 
+true props: Q21 
+Amount of clauses satisfied: 18/34
+Try Q22 = false
+
+Q11=F Q21=T Q31=F Q12=F Q22=F Q32=? Q13=? Q23=? Q33=? 
+true props: Q21 
+Amount of clauses satisfied: 23/34
+Try Q32 = false
+
+Q11=F Q21=T Q31=F Q12=F Q22=F Q32=F Q13=? Q23=? Q33=? 
+true props: Q21 
+Amount of clauses satisfied: 26/34
+back-tracking...
+Try Q32 = true
+
+Q11=F Q21=T Q31=F Q12=F Q22=F Q32=T Q13=? Q23=? Q33=? 
+true props: Q21 Q32 
+Amount of clauses satisfied: 25/34
+back-tracking...
+Try Q22 = true
+
+Q11=F Q21=T Q31=F Q12=F Q22=T Q32=? Q13=? Q23=? Q33=? 
+true props: Q21 Q22 
+Amount of clauses satisfied: 19/34
+back-tracking...
+Try Q12 = true
+
+Q11=F Q21=T Q31=F Q12=T Q22=? Q32=? Q13=? Q23=? Q33=? 
+true props: Q21 Q12 
+Amount of clauses satisfied: 15/34
+back-tracking...
+Try Q31 = true
+
+Q11=F Q21=T Q31=T Q12=? Q22=? Q32=? Q13=? Q23=? Q33=? 
+true props: Q21 Q31 
+Amount of clauses satisfied: 9/34
+back-tracking...
+Try Q11 = true
+
+Q11=T Q21=? Q31=? Q12=? Q22=? Q32=? Q13=? Q23=? Q33=? 
+true props: Q11 
+Amount of clauses satisfied: 2/34
+Try Q21 = false
+
+Q11=T Q21=F Q31=? Q12=? Q22=? Q32=? Q13=? Q23=? Q33=? 
+true props: Q11 
+Amount of clauses satisfied: 8/34
+Try Q31 = false
+
+Q11=T Q21=F Q31=F Q12=? Q22=? Q32=? Q13=? Q23=? Q33=? 
+true props: Q11 
+Amount of clauses satisfied: 13/34
+Try Q12 = false
+
+Q11=T Q21=F Q31=F Q12=F Q22=? Q32=? Q13=? Q23=? Q33=? 
+true props: Q11 
+Amount of clauses satisfied: 18/34
+Try Q22 = false
+
+Q11=T Q21=F Q31=F Q12=F Q22=F Q32=? Q13=? Q23=? Q33=? 
+true props: Q11 
+Amount of clauses satisfied: 23/34
+Try Q32 = false
+
+Q11=T Q21=F Q31=F Q12=F Q22=F Q32=F Q13=? Q23=? Q33=? 
+true props: Q11 
+Amount of clauses satisfied: 25/34
+back-tracking...
+Try Q32 = true
+
+Q11=T Q21=F Q31=F Q12=F Q22=F Q32=T Q13=? Q23=? Q33=? 
+true props: Q11 Q32 
+Amount of clauses satisfied: 25/34
+Try Q13 = false
+
+Q11=T Q21=F Q31=F Q12=F Q22=F Q32=T Q13=F Q23=? Q33=? 
+true props: Q11 Q32 
+Amount of clauses satisfied: 28/34
+Try Q23 = false
+
+Q11=T Q21=F Q31=F Q12=F Q22=F Q32=T Q13=F Q23=F Q33=? 
+true props: Q11 Q32 
+Amount of clauses satisfied: 30/34
+back-tracking...
+Try Q23 = true
+
+Q11=T Q21=F Q31=F Q12=F Q22=F Q32=T Q13=F Q23=T Q33=? 
+true props: Q11 Q32 Q23 
+Amount of clauses satisfied: 30/34
+back-tracking...
+Try Q13 = true
+
+Q11=T Q21=F Q31=F Q12=F Q22=F Q32=T Q13=T Q23=? Q33=? 
+true props: Q11 Q32 Q13 
+Amount of clauses satisfied: 26/34
+back-tracking...
+Try Q22 = true
+
+Q11=T Q21=F Q31=F Q12=F Q22=T Q32=? Q13=? Q23=? Q33=? 
+true props: Q11 Q22 
+Amount of clauses satisfied: 20/34
+back-tracking...
+Try Q12 = true
+
+Q11=T Q21=F Q31=F Q12=T Q22=? Q32=? Q13=? Q23=? Q33=? 
+true props: Q11 Q12 
+Amount of clauses satisfied: 14/34
+back-tracking...
+Try Q31 = true
+
+Q11=T Q21=F Q31=T Q12=? Q22=? Q32=? Q13=? Q23=? Q33=? 
+true props: Q11 Q31 
+Amount of clauses satisfied: 9/34
+back-tracking...
+Try Q21 = true
+
+Q11=T Q21=T Q31=? Q12=? Q22=? Q32=? Q13=? Q23=? Q33=? 
+true props: Q11 Q21 
+Amount of clauses satisfied: 3/34
+back-tracking...
+failure! could not find a model
+DPLL_calls: 43
+Unsatisfiable Model

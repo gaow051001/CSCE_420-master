@@ -1,0 +1,115 @@
+1c. Re-write the KB in CNF (again, you will want to write a small script to generate all the
+clauses and number them; you don’t have to show the conversion steps for each sentence).
+
+#• procedure for converting any propositional sentence to CNF (p. 227)
+#1. eliminate implications (and biconditionals)
+#2. push negations inward (using DoubleNegElim and DeMorgan’s)
+#3. distribute Or’s over And’s (till expression is 2-level Boolean CNF)
+#4. break final conjunction into multiple clauses
+
+a) Every box contains one (and only) of the 3 colors.
+1. C1Y v C1W v C1B 
+2. C2Y v C2W v C2B 
+3. C3Y v C3W v C3B 
+
+b) Each box is a different color.
+
+C1Y -> (-C2Y ^ -C3Y)
+C1W -> (-C2W ^ -C3W)
+C1B -> (-C2B ^ -C3B)
+
+C2Y -> (-C1Y ^ -C3Y)
+C2W -> (-C1W ^ -C3W)
+C2B -> (-C1B ^ -C3B)
+
+C3Y -> (-C2Y ^ -C1Y)
+C3W -> (-C2W ^ -C1W)
+C3B -> (-C2B ^ -C1B)
+
+#Example
+#-C1Y v (-C2Y ^ -C3Y) 
+#(-C1Y v -C2Y) ^ (-C1Y v -C3Y) 
+#(-C1Y v -C2Y)
+#(-C1Y v -C3Y) 
+
+4. -C1Y v -C2Y
+5. -C1Y v -C3Y
+6. -C1W v -C2W
+7. -C1W v -C3W
+8. -C1B v -C2B
+9. -C1B v -C3B
+
+10. -C2Y v -C1Y
+11. -C2Y v -C3Y
+12. -C2W v -C1W
+13. -C2W v -C3W
+14. -C2B v -C1B
+15. -C2B v -C3B
+
+16. -C3Y v -C2Y
+17. -C3Y v -C1Y
+18. -C3W v -C2W
+19. -C3W v -C1W
+20. -C3B v -C2B
+21. -C3B v -C1B
+
+c) For each box and each color...if the box is labelled with that color, then it does not
+actually contain that color.
+L1B -> -C1B
+L2B -> -C2B
+L3B -> -C3B
+
+L1Y -> -C1Y
+L2Y -> -C2Y
+L3Y -> -C3Y
+
+L1W -> -C1W
+L2W -> -C2W
+L3W -> -C3W
+
+
+#Example
+#-L1B v -C1B
+
+22. -L1B v -C1B
+23. -L2B v -C2B
+24. -L3B v -C3B
+
+25. -L1Y v -C1Y
+26. -L2Y v -C2Y
+27. -L3Y v -C3Y
+
+28. -L1W v -C1W
+29. -L2W v -C2W
+30. -L3W v -C3W
+
+d) For each box and each color...if you observe a ball of that color drawn from that box,
+then it actually contains either that color alone, or both.
+O1Y -> (C1Y v C1B)
+O2Y -> (C2Y v C2B)
+O3Y -> (C3Y v C3B)
+
+O1W -> (C1W v C1B)
+O2W -> (C2W v C2B)
+O3W -> (C3W v C3B)
+
+#Example
+#-O1Y v (C1Y v C1B)
+#-O1Y v C1Y v C1B
+
+31. -O1Y v C1Y v C1B
+32. -O2Y v C2Y v C2B
+33. -O3Y v C3Y v C3B
+
+34. -O1W v C1W v C1B
+35. -O2W v C2W v C2B
+36. -O3W v C3W v C3B
+
+
+e) Include the 6 initial facts at the end.
+37. O1Y
+38. L1W
+39. O2W
+40. L2Y
+41. O3Y
+42. L3B

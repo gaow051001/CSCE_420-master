@@ -1,0 +1,106 @@
+Welcome to Tic-Tac-Toe
+...
+...
+...
+
+> move X A 2
+move X A 2
+.X.
+...
+...
+
+> choose O
+choose O
+move (A,0) mm_score: 0
+move (A,2) mm_score: 0
+move (B,0) mm_score: -0.5
+move (B,1) mm_score: 0
+move (B,2) mm_score: -0.5
+move (C,0) mm_score: -0.5
+move (C,1) mm_score: 0
+move (C,2) mm_score: -0.5
+number of searched nodes: 63904
+OX.
+...
+...
+
+> choose X
+choose X
+move (A,2) mm_score: -0.5
+move (B,0) mm_score: 0
+move (B,1) mm_score: 0
+move (B,2) mm_score: -0.5
+move (C,0) mm_score: 0
+move (C,1) mm_score: -0.5
+move (C,2) mm_score: 0
+number of searched nodes: 8751
+OX.
+X..
+...
+
+> choose O
+choose O
+move (A,2) mm_score: -0.7
+move (B,1) mm_score: 0
+move (B,2) mm_score: 0
+move (C,0) mm_score: -0.7
+move (C,1) mm_score: 0
+move (C,2) mm_score: -0.7
+number of searched nodes: 1464
+OX.
+XO.
+...
+
+> choose X
+choose X
+move (A,2) mm_score: -0.9
+move (B,2) mm_score: -0.9
+move (C,0) mm_score: -0.9
+move (C,1) mm_score: -0.9
+move (C,2) mm_score: 0
+number of searched nodes: 229
+OX.
+XO.
+..X
+
+> choose O
+choose O
+move (A,2) mm_score: 0
+move (B,2) mm_score: 0
+move (C,0) mm_score: 0
+move (C,1) mm_score: 0
+number of searched nodes: 60
+OXO
+XO.
+..X
+
+> choose X
+choose X
+move (B,2) mm_score: -0.9
+move (C,0) mm_score: 0
+move (C,1) mm_score: -0.9
+number of searched nodes: 13
+OXO
+XO.
+X.X
+
+> choose O
+choose O
+move (B,2) mm_score: -0.9
+move (C,1) mm_score: 0
+number of searched nodes: 4
+OXO
+XO.
+XOX
+
+> choose X
+choose X
+move (B,2) mm_score: 0
+number of searched nodes: 1
+OXO
+XOX
+XOX
+
+*** it's a draw! ***
+> quit
+Good Bye!

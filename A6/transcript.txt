@@ -1,0 +1,137 @@
+?- brother(rod,X).
+X = tod ;
+false.
+
+?- sister(marge,X).
+X = patty ;
+X = selma.
+
+?- aunt(X,patty).
+X = bart ;
+X = lisa ;
+X = maggie ;
+false.
+
+?- uncle(bart,X).
+X = herb ;
+false.
+
+?- grandfather(maggie,X).
+X = abraham ;
+false.
+
+?- granddaughter(jackie,lisa).
+true.
+
+?- ancestor(bart,X).
+X = homer ;
+X = marge ;
+X = abraham ;
+X = jackie.
+
+?- unrelated(tod,bart).
+true.
+
+?- unrelated(maggie,smithers).
+true.
+
+?- unrelated(maggie,selma).
+false.
+
+?- query(X).
+X = charlie ;
+X = lisa.
+
+?- canTeach(X,Y).
+X = bill,
+Y = organic ;
+X = bill,
+Y = inorganic ;
+X = susan,
+Y = algebra ;
+X = susan,
+Y = calculus.
+
+?- canTeach2(X,Y).
+X = bill,
+Y = organic ;
+X = bill,
+Y = inorganic ;
+X = chuck,
+Y = dynamics ;
+X = chuck,
+Y = electromagnetism ;
+X = chuck,
+Y = nuclear ;
+X = susan,
+Y = algebra ;
+X = susan,
+Y = calculus ;
+false.
+
+?- canTeach3(X,Y).
+X = chuck,
+Y = dynamics ;
+X = chuck,
+Y = electromagnetism ;
+X = chuck,
+Y = nuclear ;
+X = susan,
+Y = algebra ;
+X = susan,
+Y = calculus ;
+false.
+
+?- countup(2,8).
+2
+3
+4
+5
+6
+7
+8
+true 
+
+?- countup1(2,8).
+2
+3
+4
+5
+6
+7
+8
+true ;
+false.
+
+?- countup2(2,8).
+2
+3
+4
+5
+6
+7
+8
+true ;
+false.
+
+?- countup3(2,8).
+2
+3
+4
+5
+6
+7
+8
+true ;
+false.
+
+?- countup4(2,8).
+2
+3
+4
+5
+6
+7
+8
+true ;
+false.

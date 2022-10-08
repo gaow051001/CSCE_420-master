@@ -1,0 +1,35 @@
+1d. Prove C2W using Resolution Refutation. (write down each of the annotated steps in a text
+file)
+
+//Using the CNF instances from the no-script
+* CNF-X, where X is the Rule Number in the CNF
+
+1. Negate the Query so derive into -C2W
+2. (CNF-41) [O3Y] and  (CNF-33) [-O3Y v C3Y v C3B] lead  C3Y v C3B by resolution
+3. (CNF-42) [L3B] and (CNF-24) [-L3B v -C3B] lead to -C3B by resolution
+4. Step 2 [C3Y v C3B] and Step 3 [-C3B] lead to C3Y by resolution
+5. Step 4 [C3Y] and (CNF-17) [-C3Y v -C1Y] lead to -C1Y by resolution
+6. (CNF-37) [O1Y] and (CNF-31) [-O1Y v C1Y v C1B] lead to C1Y v C1B by resolution
+7. Step 5 [-C1Y] and Step 6 [C1Y v C1B] lead to C1B by resolution
+8. Step 7 [C1B] and (CNF-8) [-C1B v -C2B] lead to -C2B by resolution
+9. (CNF-39) [O2W] and (CNF-35) [-O2W v C2W v C2B] lead to C2W v C2B by resolution
+10. Step 8 [-C2B] and Step 9 [C2W v C2B] lead to C2W by resolution
+11. Resolve Step 10 [C2W] and Step 1 [-C2W lead to empty clause by resolution
+
+KB |= C2W
+Since no model satisfy KB and -C2W
+
+
+//Using the script file
+
+1. Negate the Query so derive into -C2W
+2. (CNF-41) [O3Y] and  (CNF-36) [-O3Y v C3Y v C3B] lead  C3Y v C3B by resolution
+3. (CNF-42) [L3B] and (CNF-30) [-L3B v -C3B] lead to -C3B by resolution
+4. Step 2 [C3Y v C3B] and Step 3 [-C3B] lead to C3Y by resolution
+5. Step 4 [C3Y] and (CNF-16) [-C3Y v -C1Y] lead to -C1Y by resolution
+6. (CNF-37) [O1Y] and (CNF-32) [-O1Y v C1Y v C1B] lead to C1Y v C1B by resolution
+7. Step 5 [-C1Y] and Step 6 [C1Y v C1B] lead to C1B by resolution
+8. Step 7 [C1B] and (CNF-8) [-C1B v -C2B] lead to -C2B by resolution
+9. (CNF-39) [O2W] and (CNF-33) [-O2W v C2W v C2B] lead to C2W v C2B by resolution
+10. Step 8 [-C2B] and Step 9 [C2W v C2B] lead to C2W by resolution
+11. Resolve Step 10 [C2W] and Step 1 [-C2W lead to empty clause by resolution

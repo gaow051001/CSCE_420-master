@@ -1,0 +1,52 @@
+a) Every box contains one (and only) of the 3 colors.
+C1Y v C1W v C1B 
+C2Y v C2W v C2B 
+C3Y v C3W v C3B 
+
+b) Each box is a different color.
+
+C1Y -> (-C2Y ^ -C3Y)
+C1W -> (-C2W ^ -C3W)
+C1B -> (-C2B ^ -C3B)
+
+C2Y -> (-C1Y ^ -C3Y)
+C2W -> (-C1W ^ -C3W)
+C2B -> (-C1B ^ -C3B)
+
+C3Y -> (-C2Y ^ -C1Y)
+C3W -> (-C2W ^ -C1W)
+C3B -> (-C2B ^ -C1B)
+
+
+c) For each box and each color...if the box is labelled with that color, then it does not
+actually contain that color.
+L1B -> -C1B
+L2B -> -C2B
+L3B -> -C3B
+
+L1Y -> -C1Y
+L2Y -> -C2Y
+L3Y -> -C3Y
+
+L1W -> -C1W
+L2W -> -C2W
+L3W -> -C3W
+
+
+d) For each box and each color...if you observe a ball of that color drawn from that box,
+then it actually contains either that color alone, or both.
+O1Y -> (C1Y v C1B)
+O2Y -> (C2Y v C2B)
+O3Y -> (C3Y v C3B)
+
+O1W -> (C1W v C1B)
+O2W -> (C2W v C2B)
+O3W -> (C3W v C3B)
+
+e) Include the 6 initial facts at the end.
+O1Y
+L1W
+O2W
+L2Y
+O3Y
+L3B

@@ -1,0 +1,47 @@
+2a. Show all the inferences that can be derived by Forward-Chaining. 'CanGetToWork' should be
+among them. Show the agenda at each step, show which rules are triggered, and indicate when
+new inferences are made (the first time they are inferred).
+
+KB = {  a. CanBikeToWork → CanGetToWork
+        b. CanDriveToWork → CanGetToWork
+        c. CanWalkToWork → CanGetToWork
+        d. HaveBike ∧ WorkCloseToHome ^ Sunny → CanBikeToWork
+        e. HaveMountainBike → HaveBike
+        f. HaveTenSpeed → HaveBike
+        g. OwnCar → CanDriveToWork
+        h. OwnCar → MustGetAnnualInspection
+        i. OwnCar → MustHaveValidLicense
+        j. CanRentCar → CanDriveToWork
+        k. HaveMoney ∧ CarRentalOpen → CanRentCar
+        l. HertzOpen→ CarRentalOpen
+        m. AvisOpen→ CarRentalOpen
+        n. EnterpriseOpen→ CarRentalOpen
+        o. CarRentalOpen → IsNotAHoliday
+        p. HaveMoney ∧ TaxiAvailable → CanDriveToWork
+        q. Sunny ^ WorkCloseToHome → CanWalkToWork
+        r. HaveUmbrella ^ WorkCloseToHome → CanWalkToWork
+        s. Sunny → StreetsDry }
+
+Facts: { Rainy, HaveMoutainBike, EnjoyPlayingSoccer, WorkForUniversity,
+WorkCloseToHome, HaveMoney, HertzClosed, AvisOpen, McDonaldsOpen }
+
+* = Checked
+Agenda
+1. Rainy, HaveMoutainBike, EnjoyPlayingSoccer, WorkForUniversity, WorkCloseToHome, HaveMoney, HertzClosed, AvisOpen, McDonaldsOpen 
+// Add initial facts
+2. *Rainy, HaveMoutainBike, EnjoyPlayingSoccer, WorkForUniversity, WorkCloseToHome, HaveMoney, HertzClosed, AvisOpen, McDonaldsOpen // No new Rules Added
+3. *Rainy, *HaveMoutainBike, EnjoyPlayingSoccer, WorkForUniversity, WorkCloseToHome, HaveMoney, HertzClosed, AvisOpen, McDonaldsOpen, [HaveBike] // Rule e triggered Add new Rule
+4. *Rainy, *HaveMoutainBike, *EnjoyPlayingSoccer, WorkForUniversity, WorkCloseToHome, HaveMoney, HertzClosed, AvisOpen, McDonaldsOpen, HaveBike // No new Rules Added
+5. *Rainy, *HaveMoutainBike, *EnjoyPlayingSoccer, *WorkForUniversity, WorkCloseToHome, HaveMoney, HertzClosed, AvisOpen, McDonaldsOpen, HaveBike // No new Rules Added
+6. *Rainy, *HaveMoutainBike, *EnjoyPlayingSoccer, *WorkForUniversity, *WorkCloseToHome, HaveMoney, HertzClosed, AvisOpen, McDonaldsOpen, HaveBike // No new Rules Added
+7. *Rainy, *HaveMoutainBike, *EnjoyPlayingSoccer, *WorkForUniversity, *WorkCloseToHome, *HaveMoney, HertzClosed, AvisOpen, McDonaldsOpen, HaveBike // No new Rules Added
+8. *Rainy, *HaveMoutainBike, *EnjoyPlayingSoccer, *WorkForUniversity, *WorkCloseToHome, *HaveMoney, *HertzClosed, AvisOpen, McDonaldsOpen, HaveBike // No new Rules Added
+9. *Rainy, *HaveMoutainBike, *EnjoyPlayingSoccer, *WorkForUniversity, *WorkCloseToHome, *HaveMoney, *HertzClosed, *AvisOpen, McDonaldsOpen, HaveBike, [CarRentalOpen] // Rule m triggered Add new Rule 
+10. *Rainy, *HaveMoutainBike, *EnjoyPlayingSoccer, *WorkForUniversity, *WorkCloseToHome, *HaveMoney, *HertzClosed, *AvisOpen, *McDonaldsOpen, HaveBike, CarRentalOpen // No new Rules Added
+11. *Rainy, *HaveMoutainBike, *EnjoyPlayingSoccer, *WorkForUniversity, *WorkCloseToHome, *HaveMoney, *HertzClosed, *AvisOpen, *McDonaldsOpen, *HaveBike, CarRentalOpen // No new Rules Added
+12. *Rainy, *HaveMoutainBike, *EnjoyPlayingSoccer, *WorkForUniversity, *WorkCloseToHome, *HaveMoney, *HertzClosed, *AvisOpen, *McDonaldsOpen, *HaveBike, *CarRentalOpen, [IsNotAHoliday], [CanRentCar] // Rule o and k triggered Add 2 new Rule 
+13. *Rainy, *HaveMoutainBike, *EnjoyPlayingSoccer, *WorkForUniversity, *WorkCloseToHome, *HaveMoney, *HertzClosed, *AvisOpen, *McDonaldsOpen, *HaveBike, *CarRentalOpen, *IsNotAHoliday, CanRentCar // No new Rules Added 
+14. *Rainy, *HaveMoutainBike, *EnjoyPlayingSoccer, *WorkForUniversity, *WorkCloseToHome, *HaveMoney, *HertzClosed, *AvisOpen, *McDonaldsOpen, *HaveBike, *CarRentalOpen, *IsNotAHoliday, *CanRentCar, [CanDriveToWork] //Rule j triggered Add new Rule  
+15. *Rainy, *HaveMoutainBike, *EnjoyPlayingSoccer, *WorkForUniversity, *WorkCloseToHome, *HaveMoney, *HertzClosed, *AvisOpen, *McDonaldsOpen, *HaveBike, *CarRentalOpen, *IsNotAHoliday, *CanRentCar, *CanDriveToWork, [CanGetToWork] //Rule b triggered Add new Rule 
+16. Stop since [CanGetToWork] is query, no new rule triggered
+

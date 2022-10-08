@@ -1,0 +1,107 @@
+5 10 500
+>>>>>>>>>>
+AB
+FH
+CG
+DEIJ
+
+>>>>>>>>>>
+C
+BGHI
+D
+
+AFJE
+>>>>>>>>>>
+
+Success! iteration=18, cost=12, depth=12, max queue size=199move 0, pathcost=0, heuristic=1, f(n) = g(n) + h(n) =20     
+AB
+FH
+CG
+DEIJ
+
+>>>>>>>>>>>>>>>
+move 1, pathcost=1, heuristic=1, f(n) = g(n) + h(n) =21     
+A
+FH
+CGB
+DEIJ
+
+>>>>>>>>>>>>>>>
+move 2, pathcost=2, heuristic=1, f(n) = g(n) + h(n) =20     
+
+FH
+CGB
+DEIJ
+A
+>>>>>>>>>>>>>>>
+move 3, pathcost=3, heuristic=1, f(n) = g(n) + h(n) =21     
+
+F
+CGB
+DEIJH
+A
+>>>>>>>>>>>>>>>
+move 4, pathcost=4, heuristic=1, f(n) = g(n) + h(n) =20     
+
+
+CGB
+DEIJH
+AF
+>>>>>>>>>>>>>>>
+move 5, pathcost=5, heuristic=1, f(n) = g(n) + h(n) =19     
+
+B
+CG
+DEIJH
+AF
+>>>>>>>>>>>>>>>
+move 6, pathcost=6, heuristic=1, f(n) = g(n) + h(n) =18     
+
+BG
+C
+DEIJH
+AF
+>>>>>>>>>>>>>>>
+move 7, pathcost=7, heuristic=1, f(n) = g(n) + h(n) =17     
+C
+BG
+
+DEIJH
+AF
+>>>>>>>>>>>>>>>
+move 8, pathcost=8, heuristic=1, f(n) = g(n) + h(n) =16     
+C
+BGH
+
+DEIJ
+AF
+>>>>>>>>>>>>>>>
+move 9, pathcost=9, heuristic=1, f(n) = g(n) + h(n) =15
+C
+BGH
+
+DEI
+AFJ
+>>>>>>>>>>>>>>>
+move 10, pathcost=10, heuristic=1, f(n) = g(n) + h(n) =14   
+C
+BGHI
+
+DE
+AFJ
+>>>>>>>>>>>>>>>
+move 11, pathcost=11, heuristic=1, f(n) = g(n) + h(n) =13   
+C
+BGHI
+
+D
+AFJE
+>>>>>>>>>>>>>>>
+move 12, pathcost=12, heuristic=1, f(n) = g(n) + h(n) =12   
+C
+BGHI
+D
+
+AFJE
+>>>>>>>>>>>>>>>
+statistics: probs\probB18.bwp method Astar H1 planlen 12 iter 18 maxq 199

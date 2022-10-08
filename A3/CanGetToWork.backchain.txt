@@ -1,0 +1,44 @@
+2b. Prove that 'CanGetToWork' is entailed by Backward-Chaining. Trace all steps, showing the
+goal stack, show which rules are used at each step, and indicate if and when back-tracking
+occurs.
+
+
+KB = {  a. CanBikeToWork → CanGetToWork
+        b. CanDriveToWork → CanGetToWork
+        c. CanWalkToWork → CanGetToWork
+        d. HaveBike ∧ WorkCloseToHome ^ Sunny → CanBikeToWork
+        e. HaveMountainBike → HaveBike
+        f. HaveTenSpeed → HaveBike
+        g. OwnCar → CanDriveToWork
+        h. OwnCar → MustGetAnnualInspection
+        i. OwnCar → MustHaveValidLicense
+        j. CanRentCar → CanDriveToWork
+        k. HaveMoney ∧ CarRentalOpen → CanRentCar
+        l. HertzOpen→ CarRentalOpen
+        m. AvisOpen→ CarRentalOpen
+        n. EnterpriseOpen→ CarRentalOpen
+        o. CarRentalOpen → IsNotAHoliday
+        p. HaveMoney ∧ TaxiAvailable → CanDriveToWork
+        q. Sunny ^ WorkCloseToHome → CanWalkToWork
+        r. HaveUmbrella ^ WorkCloseToHome → CanWalkToWork
+        s. Sunny → StreetsDry }
+
+Facts: { Rainy, HaveMoutainBike, EnjoyPlayingSoccer, WorkForUniversity,
+WorkCloseToHome, HaveMoney, HertzClosed, AvisOpen, McDonaldsOpen }
+
+
+Goal Stack []
+1. [CanGetToWork] // push query
+2. [CanBikeToWork] // Pop CanGetToWork, replace with antecendent of rule a
+3. [HaveBike, WorkCloseToHome, Sunny] // Replace with antecendent of rule d
+4. [HaveMountainBike, WorkCloseToHome, Sunny] // Pop HaveBike, replace with antecendent of rule e
+5. [WorkCloseToHome, Sunny] // Pop HaveMountainBike (Known Fact)
+6. [Sunny] // Pop WorkCloseToHome (Known Fact)
+7. [CanDriveToWork] // Failed on Sunny and CanBikeToWork, Back-track to other rules of CanGetToWork; rule b
+8. [OwnCar] // Pop CanDriveToWork, replace with antecendent of rule g
+9. [CanRentCar] // Failed on OwnCar, Back-track to other rules of CanDriveToWork; rule j
+10. [HaveMoney, CarRentalOpen] // Pop CanRentCar, replace with antecendent of rule k
+11. [CarRentalOpen] // Pop HaveMoney (Known Fact)
+12. [HertzOpen] // Pop CarRentalOpen, replace with antecendent of rule l
+13. [AvisOpen] // Failed on HertzOpen, Back-track to other rules of CarRentalOpen; rule m
+14. [] // Pop AvisOpen (Known Fact) * Empty Stack (Back-chaining Complete)

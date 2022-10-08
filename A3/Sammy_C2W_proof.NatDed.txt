@@ -1,0 +1,34 @@
+1b. Prove that box 2 must contain white tennis balls (C2W) using Natural Deduction. (just write
+down each of the annotated steps in a text file)
+
+KB |= C2W by Natural Deduction
+
+//Using the KB file that is no-script
+* KB-X, where X is the Rule alphabet in the Knowledge Base
+
+1. O3Y and (KB-d) [O3Y -> (C3Y v C3B)] derive C3Y v C3B by Modus Ponens
+2. L3B and (KB-c) [L3B -> -C3B] drive -C3B by Modus Ponens
+3. Step 1 (C3Y v C3B) and Step 2 (-C3B) result in C3Y by Resolution
+4. Step 3 (C3Y) and (KB-b) [C3Y -> (-C2Y ^ -C1Y)] derive -C2Y ^ -C1Y by Modus Ponens
+5. O1Y and (KB-d) [O1Y -> (C1Y v C1B)] derive C1Y v C1B by Modus Ponens
+6. Step 4 (-C2Y ^ -C1Y) derive -C1Y by AndElimination
+7. Step 5 (C1Y v C1B) and Step 6 (-C1Y) derive C1B by Modus Ponens
+8. O2W and (KB-d) [O2W -> (C2W v C2B)] derive C2W v C2B by Modus Ponens
+9. Step 7 (C1B) and (KB-b) [C1B -> (-C2B ^ -C3B)] derive -C2B ^ -C3B by Modus Ponens
+10. Step 9 (-C2B ^ -C3B) derive -C2B by AndElimination
+11. Step 8 (C2W v C2B) and 10 (-C2B) derive C2W by Resolution
+
+//Using KB instances that is script file
+* KB-X, where X is the Rule Number in the CNF
+
+1. (KB-32) [O3Y] and (KB-27) [O3Y -> (C3Y v C3B)] derive C3Y v C3B by Modus Ponens
+2. (KB-33) L3B and (KB-21) [L3B -> -C3B] drive -C3B by Modus Ponens
+3. Step 1 (C3Y v C3B) and Step 2 (-C3B) result in C3Y by Resolution
+4. Step 3 (C3Y) and (KB-10) [C3Y -> (-C2Y ^ -C1Y)] derive -C2Y ^ -C1Y by Modus Ponens
+5. O1Y and (KB-d) [O1Y -> (C1Y v C1B)] derive C1Y v C1B by Modus Ponens
+6. Step 4 (-C2Y ^ -C1Y) derive -C1Y by AndElimination
+7. Step 5 (C1Y v C1B) and Step 6 (-C1Y) derive C1B by Modus Ponens
+8. (KB-30) O2W and (KB-24) [O2W -> (C2W v C2B)] derive C2W v C2B by Modus Ponens
+9. Step 7 (C1B) and (KB-6) [C1B -> (-C2B ^ -C3B)] derive -C2B ^ -C3B by Modus Ponens
+10. Step 9 (-C2B ^ -C3B) derive -C2B by AndElimination
+11. Step 8 (C2W v C2B) and 10 (-C2B) derive C2W by Resolution

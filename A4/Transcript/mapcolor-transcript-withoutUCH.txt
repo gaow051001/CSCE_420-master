@@ -1,0 +1,281 @@
+./dpll KB/mapcolor.cnf -UCH
+*** DPLL ***
+0. WAR WAG WAB 
+1. NTR NTG NTB 
+2. SAR SAG SAB 
+3. QR QG QB 
+4. NSWR NSWG NSWB 
+5. VR VG VB 
+6. TR TG TB 
+7. -WAR -WAG 
+8. -WAR -WAB 
+9. -WAG -WAR 
+10. -WAG -WAB 
+11. -WAB -WAR 
+12. -WAB -WAG 
+13. -NTR -NTG 
+14. -NTR -NTB 
+15. -NTG -NTR 
+16. -NTG -NTB 
+17. -NTB -NTR 
+18. -NTB -NTG 
+19. -SAR -SAG 
+20. -SAR -SAB 
+21. -SAG -SAR 
+22. -SAG -SAB 
+23. -SAB -SAR 
+24. -SAB -SAG 
+25. -QR -QG 
+26. -QR -QB 
+27. -QG -QR 
+28. -QG -QB 
+29. -QB -QR 
+30. -QB -QG 
+31. -NSWR -NSWG 
+32. -NSWR -NSWB 
+33. -NSWG -NSWR 
+34. -NSWG -NSWB 
+35. -NSWB -NSWR 
+36. -NSWB -NSWG 
+37. -VR -VG 
+38. -VR -VB 
+39. -VG -VR 
+40. -VG -VB 
+41. -VB -VR 
+42. -VB -VG 
+43. -TR -TG 
+44. -TR -TB 
+45. -TG -TR 
+46. -TG -TB 
+47. -TB -TR 
+48. -TB -TG 
+49. -WAR -NTR 
+50. -WAG -NTG 
+51. -WAB -NTB 
+52. -NTR -QR 
+53. -NTG -QG 
+54. -NTB -QB 
+55. -SAR -WAR 
+56. -SAR -NTR 
+57. -SAR -QR 
+58. -SAR -NSWR 
+59. -SAR -VR 
+60. -SAG -WAG 
+61. -SAG -NTG 
+62. -SAG -QG 
+63. -SAG -NSWG 
+64. -SAG -VG 
+65. -SAB -WAB 
+66. -SAB -NTB 
+67. -SAB -QB 
+68. -SAB -NSWB 
+69. -SAB -VB 
+70. -QR -NSWR 
+71. -QG -NSWG 
+72. -QB -NSWB 
+73. -NSWR -VR 
+74. -NSWG -VG 
+75. -NSWB -VB 
+...tracing info...
+
+Running without Unit Clause Heuristic
+
+WAR=? WAG=? WAB=? NTR=? NTG=? NTB=? SAR=? SAG=? SAB=? QR=? QG=? QB=? NSWR=? NSWG=? NSWB=? VR=? VG=? VB=? TR=? TG=? TB=? 
+true props: 
+Amount of clauses satisfied: 0/76
+Try WAR = false
+
+WAR=F WAG=? WAB=? NTR=? NTG=? NTB=? SAR=? SAG=? SAB=? QR=? QG=? QB=? NSWR=? NSWG=? NSWB=? VR=? VG=? VB=? TR=? TG=? TB=? 
+true props: 
+Amount of clauses satisfied: 6/76
+Try WAG = false
+
+WAR=F WAG=F WAB=? NTR=? NTG=? NTB=? SAR=? SAG=? SAB=? QR=? QG=? QB=? NSWR=? NSWG=? NSWB=? VR=? VG=? VB=? TR=? TG=? TB=? 
+true props: 
+Amount of clauses satisfied: 10/76
+Try WAB = false
+
+WAR=F WAG=F WAB=F NTR=? NTG=? NTB=? SAR=? SAG=? SAB=? QR=? QG=? QB=? NSWR=? NSWG=? NSWB=? VR=? VG=? VB=? TR=? TG=? TB=? 
+true props: 
+Amount of clauses satisfied: 12/76
+back-tracking...
+Try WAB = true
+
+WAR=F WAG=F WAB=T NTR=? NTG=? NTB=? SAR=? SAG=? SAB=? QR=? QG=? QB=? NSWR=? NSWG=? NSWB=? VR=? VG=? VB=? TR=? TG=? TB=? 
+true props: WAB 
+Amount of clauses satisfied: 11/76
+Try NTR = false
+
+WAR=F WAG=F WAB=T NTR=F NTG=? NTB=? SAR=? SAG=? SAB=? QR=? QG=? QB=? NSWR=? NSWG=? NSWB=? VR=? VG=? VB=? TR=? TG=? TB=? 
+true props: WAB 
+Amount of clauses satisfied: 17/76
+Try NTG = false
+
+WAR=F WAG=F WAB=T NTR=F NTG=F NTB=? SAR=? SAG=? SAB=? QR=? QG=? QB=? NSWR=? NSWG=? NSWB=? VR=? VG=? VB=? TR=? TG=? TB=? 
+true props: WAB 
+Amount of clauses satisfied: 21/76
+Try NTB = false
+
+WAR=F WAG=F WAB=T NTR=F NTG=F NTB=F SAR=? SAG=? SAB=? QR=? QG=? QB=? NSWR=? NSWG=? NSWB=? VR=? VG=? VB=? TR=? TG=? TB=? 
+true props: WAB 
+Amount of clauses satisfied: 24/76
+back-tracking...
+Try NTB = true
+
+WAR=F WAG=F WAB=T NTR=F NTG=F NTB=T SAR=? SAG=? SAB=? QR=? QG=? QB=? NSWR=? NSWG=? NSWB=? VR=? VG=? VB=? TR=? TG=? TB=? 
+true props: WAB NTB 
+Amount of clauses satisfied: 22/76
+back-tracking...
+Try NTG = true
+
+WAR=F WAG=F WAB=T NTR=F NTG=T NTB=? SAR=? SAG=? SAB=? QR=? QG=? QB=? NSWR=? NSWG=? NSWB=? VR=? VG=? VB=? TR=? TG=? TB=? 
+true props: WAB NTG 
+Amount of clauses satisfied: 18/76
+Try NTB = false
+
+WAR=F WAG=F WAB=T NTR=F NTG=T NTB=F SAR=? SAG=? SAB=? QR=? QG=? QB=? NSWR=? NSWG=? NSWB=? VR=? VG=? VB=? TR=? TG=? TB=? 
+true props: WAB NTG 
+Amount of clauses satisfied: 23/76
+Try SAR = false
+
+WAR=F WAG=F WAB=T NTR=F NTG=T NTB=F SAR=F SAG=? SAB=? QR=? QG=? QB=? NSWR=? NSWG=? NSWB=? VR=? VG=? VB=? TR=? TG=? TB=? 
+true props: WAB NTG 
+Amount of clauses satisfied: 30/76
+Try SAG = false
+
+WAR=F WAG=F WAB=T NTR=F NTG=T NTB=F SAR=F SAG=F SAB=? QR=? QG=? QB=? NSWR=? NSWG=? NSWB=? VR=? VG=? VB=? TR=? TG=? TB=? 
+true props: WAB NTG 
+Amount of clauses satisfied: 36/76
+Try SAB = false
+
+WAR=F WAG=F WAB=T NTR=F NTG=T NTB=F SAR=F SAG=F SAB=F QR=? QG=? QB=? NSWR=? NSWG=? NSWB=? VR=? VG=? VB=? TR=? TG=? TB=? 
+true props: WAB NTG 
+Amount of clauses satisfied: 40/76
+back-tracking...
+Try SAB = true
+
+WAR=F WAG=F WAB=T NTR=F NTG=T NTB=F SAR=F SAG=F SAB=T QR=? QG=? QB=? NSWR=? NSWG=? NSWB=? VR=? VG=? VB=? TR=? TG=? TB=? 
+true props: WAB NTG SAB 
+Amount of clauses satisfied: 37/76
+back-tracking...
+Try SAG = true
+
+WAR=F WAG=F WAB=T NTR=F NTG=T NTB=F SAR=F SAG=T SAB=? QR=? QG=? QB=? NSWR=? NSWG=? NSWB=? VR=? VG=? VB=? TR=? TG=? TB=? 
+true props: WAB NTG SAG 
+Amount of clauses satisfied: 31/76
+back-tracking...
+Try SAR = true
+
+WAR=F WAG=F WAB=T NTR=F NTG=T NTB=F SAR=T SAG=? SAB=? QR=? QG=? QB=? NSWR=? NSWG=? NSWB=? VR=? VG=? VB=? TR=? TG=? TB=? 
+true props: WAB NTG SAR 
+Amount of clauses satisfied: 24/76
+Try SAG = false
+
+WAR=F WAG=F WAB=T NTR=F NTG=T NTB=F SAR=T SAG=F SAB=? QR=? QG=? QB=? NSWR=? NSWG=? NSWB=? VR=? VG=? VB=? TR=? TG=? TB=? 
+true props: WAB NTG SAR 
+Amount of clauses satisfied: 32/76
+Try SAB = false
+
+WAR=F WAG=F WAB=T NTR=F NTG=T NTB=F SAR=T SAG=F SAB=F QR=? QG=? QB=? NSWR=? NSWG=? NSWB=? VR=? VG=? VB=? TR=? TG=? TB=? 
+true props: WAB NTG SAR 
+Amount of clauses satisfied: 38/76
+Try QR = false
+
+WAR=F WAG=F WAB=T NTR=F NTG=T NTB=F SAR=T SAG=F SAB=F QR=F QG=? QB=? NSWR=? NSWG=? NSWB=? VR=? VG=? VB=? TR=? TG=? TB=? 
+true props: WAB NTG SAR 
+Amount of clauses satisfied: 44/76
+Try QG = false
+
+WAR=F WAG=F WAB=T NTR=F NTG=T NTB=F SAR=T SAG=F SAB=F QR=F QG=F QB=? NSWR=? NSWG=? NSWB=? VR=? VG=? VB=? TR=? TG=? TB=? 
+true props: WAB NTG SAR 
+Amount of clauses satisfied: 48/76
+Try QB = false
+
+WAR=F WAG=F WAB=T NTR=F NTG=T NTB=F SAR=T SAG=F SAB=F QR=F QG=F QB=F NSWR=? NSWG=? NSWB=? VR=? VG=? VB=? TR=? TG=? TB=? 
+true props: WAB NTG SAR 
+Amount of clauses satisfied: 49/76
+back-tracking...
+Try QB = true
+
+WAR=F WAG=F WAB=T NTR=F NTG=T NTB=F SAR=T SAG=F SAB=F QR=F QG=F QB=T NSWR=? NSWG=? NSWB=? VR=? VG=? VB=? TR=? TG=? TB=? 
+true props: WAB NTG SAR QB 
+Amount of clauses satisfied: 49/76
+Try NSWR = false
+
+WAR=F WAG=F WAB=T NTR=F NTG=T NTB=F SAR=T SAG=F SAB=F QR=F QG=F QB=T NSWR=F NSWG=? NSWB=? VR=? VG=? VB=? TR=? TG=? TB=? 
+true props: WAB NTG SAR QB 
+Amount of clauses satisfied: 55/76
+Try NSWG = false
+
+WAR=F WAG=F WAB=T NTR=F NTG=T NTB=F SAR=T SAG=F SAB=F QR=F QG=F QB=T NSWR=F NSWG=F NSWB=? VR=? VG=? VB=? TR=? TG=? TB=? 
+true props: WAB NTG SAR QB 
+Amount of clauses satisfied: 58/76
+Try NSWB = false
+
+WAR=F WAG=F WAB=T NTR=F NTG=T NTB=F SAR=T SAG=F SAB=F QR=F QG=F QB=T NSWR=F NSWG=F NSWB=F VR=? VG=? VB=? TR=? TG=? TB=? 
+true props: WAB NTG SAR QB 
+Amount of clauses satisfied: 60/76
+back-tracking...
+Try NSWB = true
+
+WAR=F WAG=F WAB=T NTR=F NTG=T NTB=F SAR=T SAG=F SAB=F QR=F QG=F QB=T NSWR=F NSWG=F NSWB=T VR=? VG=? VB=? TR=? TG=? TB=? 
+true props: WAB NTG SAR QB NSWB 
+Amount of clauses satisfied: 59/76
+back-tracking...
+Try NSWG = true
+
+WAR=F WAG=F WAB=T NTR=F NTG=T NTB=F SAR=T SAG=F SAB=F QR=F QG=F QB=T NSWR=F NSWG=T NSWB=? VR=? VG=? VB=? TR=? TG=? TB=? 
+true props: WAB NTG SAR QB NSWG 
+Amount of clauses satisfied: 56/76
+Try NSWB = false
+
+WAR=F WAG=F WAB=T NTR=F NTG=T NTB=F SAR=T SAG=F SAB=F QR=F QG=F QB=T NSWR=F NSWG=T NSWB=F VR=? VG=? VB=? TR=? TG=? TB=? 
+true props: WAB NTG SAR QB NSWG 
+Amount of clauses satisfied: 60/76
+Try VR = false
+
+WAR=F WAG=F WAB=T NTR=F NTG=T NTB=F SAR=T SAG=F SAB=F QR=F QG=F QB=T NSWR=F NSWG=T NSWB=F VR=F VG=? VB=? TR=? TG=? TB=? 
+true props: WAB NTG SAR QB NSWG 
+Amount of clauses satisfied: 65/76
+Try VG = false
+
+WAR=F WAG=F WAB=T NTR=F NTG=T NTB=F SAR=T SAG=F SAB=F QR=F QG=F QB=T NSWR=F NSWG=T NSWB=F VR=F VG=F VB=? TR=? TG=? TB=? 
+true props: WAB NTG SAR QB NSWG 
+Amount of clauses satisfied: 68/76
+Try VB = false
+
+WAR=F WAG=F WAB=T NTR=F NTG=T NTB=F SAR=T SAG=F SAB=F QR=F QG=F QB=T NSWR=F NSWG=T NSWB=F VR=F VG=F VB=F TR=? TG=? TB=? 
+true props: WAB NTG SAR QB NSWG 
+Amount of clauses satisfied: 68/76
+back-tracking...
+Try VB = true
+
+WAR=F WAG=F WAB=T NTR=F NTG=T NTB=F SAR=T SAG=F SAB=F QR=F QG=F QB=T NSWR=F NSWG=T NSWB=F VR=F VG=F VB=T TR=? TG=? TB=? 
+true props: WAB NTG SAR QB NSWG VB 
+Amount of clauses satisfied: 69/76
+Try TR = false
+
+WAR=F WAG=F WAB=T NTR=F NTG=T NTB=F SAR=T SAG=F SAB=F QR=F QG=F QB=T NSWR=F NSWG=T NSWB=F VR=F VG=F VB=T TR=F TG=? TB=? 
+true props: WAB NTG SAR QB NSWG VB 
+Amount of clauses satisfied: 73/76
+Try TG = false
+
+WAR=F WAG=F WAB=T NTR=F NTG=T NTB=F SAR=T SAG=F SAB=F QR=F QG=F QB=T NSWR=F NSWG=T NSWB=F VR=F VG=F VB=T TR=F TG=F TB=? 
+true props: WAB NTG SAR QB NSWG VB 
+Amount of clauses satisfied: 75/76
+Try TB = false
+
+WAR=F WAG=F WAB=T NTR=F NTG=T NTB=F SAR=T SAG=F SAB=F QR=F QG=F QB=T NSWR=F NSWG=T NSWB=F VR=F VG=F VB=T TR=F TG=F TB=F 
+true props: WAB NTG SAR QB NSWG VB 
+Amount of clauses satisfied: 75/76
+back-tracking...
+Try TB = true
+
+WAR=F WAG=F WAB=T NTR=F NTG=T NTB=F SAR=T SAG=F SAB=F QR=F QG=F QB=T NSWR=F NSWG=T NSWB=F VR=F VG=F VB=T TR=F TG=F TB=T 
+true props: WAB NTG SAR QB NSWG VB TB 
+Amount of clauses satisfied: 76/76
+
+success! found a model
+model: WAR=F WAG=F WAB=T NTR=F NTG=T NTB=F SAR=T SAG=F SAB=F QR=F QG=F QB=T NSWR=F NSWG=T NSWB=F VR=F VG=F VB=T TR=F TG=F TB=T 
+true props: WAB NTG SAR QB NSWG VB TB 
+DPLL_calls: 37

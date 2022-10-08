@@ -1,0 +1,263 @@
+./dpll KB/Sammy.CNF.txt -UCH
+*** DPLL ***
+0. C1Y C1W C1B 
+1. C2Y C2W C2B 
+2. C3Y C3W C3B 
+3. -C1Y -C2Y 
+4. -C1Y -C3Y 
+5. -C1W -C2W 
+6. -C1W -C3W 
+7. -C1B -C2B 
+8. -C1B -C3B 
+9. -C2Y -C3Y 
+10. -C2Y -C1Y 
+11. -C2W -C3W 
+12. -C2W -C1W 
+13. -C2B -C3B 
+14. -C2B -C1B 
+15. -C3Y -C1Y 
+16. -C3Y -C2Y 
+17. -C3W -C1W 
+18. -C3W -C2W 
+19. -C3B -C1B 
+20. -C3B -C2B 
+21. -L1Y -C1Y 
+22. -L2Y -C2Y 
+23. -L3Y -C3Y 
+24. -L1W -C1W 
+25. -L2W -C2W 
+26. -L3W -C3W 
+27. -L1B -C1B 
+28. -L2B -C2B 
+29. -L3B -C3B 
+30. -O1W C1W C1B 
+31. -O1Y C1Y C1B 
+32. -O2W C2W C2B 
+33. -O2Y C2Y C2B 
+34. -O3W C3W C3B 
+35. -O3Y C3Y C3B 
+36. O1Y 
+37. L1W 
+38. O2W 
+39. L2Y 
+40. O3Y 
+41. L3B 
+...tracing info...
+
+Running without Unit Clause Heuristic
+
+C1Y=? C1W=? C1B=? C2Y=? C2W=? C2B=? C3Y=? C3W=? C3B=? L1Y=? L2Y=? L3Y=? L1W=? L2W=? L3W=? L1B=? L2B=? L3B=? O1W=? O1Y=? O2W=? O2Y=? O3W=? O3Y=? 
+true props: 
+Amount of clauses satisfied: 0/42
+Try C1Y = false
+
+C1Y=F C1W=? C1B=? C2Y=? C2W=? C2B=? C3Y=? C3W=? C3B=? L1Y=? L2Y=? L3Y=? L1W=? L2W=? L3W=? L1B=? L2B=? L3B=? O1W=? O1Y=? O2W=? O2Y=? O3W=? O3Y=? 
+true props: 
+Amount of clauses satisfied: 5/42
+Try C1W = false
+
+C1Y=F C1W=F C1B=? C2Y=? C2W=? C2B=? C3Y=? C3W=? C3B=? L1Y=? L2Y=? L3Y=? L1W=? L2W=? L3W=? L1B=? L2B=? L3B=? O1W=? O1Y=? O2W=? O2Y=? O3W=? O3Y=? 
+true props: 
+Amount of clauses satisfied: 10/42
+Try C1B = false
+
+C1Y=F C1W=F C1B=F C2Y=? C2W=? C2B=? C3Y=? C3W=? C3B=? L1Y=? L2Y=? L3Y=? L1W=? L2W=? L3W=? L1B=? L2B=? L3B=? O1W=? O1Y=? O2W=? O2Y=? O3W=? O3Y=? 
+true props: 
+Amount of clauses satisfied: 15/42
+back-tracking...
+Try C1B = true
+
+C1Y=F C1W=F C1B=T C2Y=? C2W=? C2B=? C3Y=? C3W=? C3B=? L1Y=? L2Y=? L3Y=? L1W=? L2W=? L3W=? L1B=? L2B=? L3B=? O1W=? O1Y=? O2W=? O2Y=? O3W=? O3Y=? 
+true props: C1B 
+Amount of clauses satisfied: 13/42
+Try C2Y = false
+
+C1Y=F C1W=F C1B=T C2Y=F C2W=? C2B=? C3Y=? C3W=? C3B=? L1Y=? L2Y=? L3Y=? L1W=? L2W=? L3W=? L1B=? L2B=? L3B=? O1W=? O1Y=? O2W=? O2Y=? O3W=? O3Y=? 
+true props: C1B 
+Amount of clauses satisfied: 16/42
+Try C2W = false
+
+C1Y=F C1W=F C1B=T C2Y=F C2W=F C2B=? C3Y=? C3W=? C3B=? L1Y=? L2Y=? L3Y=? L1W=? L2W=? L3W=? L1B=? L2B=? L3B=? O1W=? O1Y=? O2W=? O2Y=? O3W=? O3Y=? 
+true props: C1B 
+Amount of clauses satisfied: 19/42
+Try C2B = false
+
+C1Y=F C1W=F C1B=T C2Y=F C2W=F C2B=F C3Y=? C3W=? C3B=? L1Y=? L2Y=? L3Y=? L1W=? L2W=? L3W=? L1B=? L2B=? L3B=? O1W=? O1Y=? O2W=? O2Y=? O3W=? O3Y=? 
+true props: C1B 
+Amount of clauses satisfied: 24/42
+back-tracking...
+Try C2B = true
+
+C1Y=F C1W=F C1B=T C2Y=F C2W=F C2B=T C3Y=? C3W=? C3B=? L1Y=? L2Y=? L3Y=? L1W=? L2W=? L3W=? L1B=? L2B=? L3B=? O1W=? O1Y=? O2W=? O2Y=? O3W=? O3Y=? 
+true props: C1B C2B 
+Amount of clauses satisfied: 22/42
+back-tracking...
+Try C2W = true
+
+C1Y=F C1W=F C1B=T C2Y=F C2W=T C2B=? C3Y=? C3W=? C3B=? L1Y=? L2Y=? L3Y=? L1W=? L2W=? L3W=? L1B=? L2B=? L3B=? O1W=? O1Y=? O2W=? O2Y=? O3W=? O3Y=? 
+true props: C1B C2W 
+Amount of clauses satisfied: 18/42
+Try C2B = false
+
+C1Y=F C1W=F C1B=T C2Y=F C2W=T C2B=F C3Y=? C3W=? C3B=? L1Y=? L2Y=? L3Y=? L1W=? L2W=? L3W=? L1B=? L2B=? L3B=? O1W=? O1Y=? O2W=? O2Y=? O3W=? O3Y=? 
+true props: C1B C2W 
+Amount of clauses satisfied: 23/42
+Try C3Y = false
+
+C1Y=F C1W=F C1B=T C2Y=F C2W=T C2B=F C3Y=F C3W=? C3B=? L1Y=? L2Y=? L3Y=? L1W=? L2W=? L3W=? L1B=? L2B=? L3B=? O1W=? O1Y=? O2W=? O2Y=? O3W=? O3Y=? 
+true props: C1B C2W 
+Amount of clauses satisfied: 24/42
+Try C3W = false
+
+C1Y=F C1W=F C1B=T C2Y=F C2W=T C2B=F C3Y=F C3W=F C3B=? L1Y=? L2Y=? L3Y=? L1W=? L2W=? L3W=? L1B=? L2B=? L3B=? O1W=? O1Y=? O2W=? O2Y=? O3W=? O3Y=? 
+true props: C1B C2W 
+Amount of clauses satisfied: 27/42
+Try C3B = false
+
+C1Y=F C1W=F C1B=T C2Y=F C2W=T C2B=F C3Y=F C3W=F C3B=F L1Y=? L2Y=? L3Y=? L1W=? L2W=? L3W=? L1B=? L2B=? L3B=? O1W=? O1Y=? O2W=? O2Y=? O3W=? O3Y=? 
+true props: C1B C2W 
+Amount of clauses satisfied: 30/42
+back-tracking...
+Try C3B = true
+
+C1Y=F C1W=F C1B=T C2Y=F C2W=T C2B=F C3Y=F C3W=F C3B=T L1Y=? L2Y=? L3Y=? L1W=? L2W=? L3W=? L1B=? L2B=? L3B=? O1W=? O1Y=? O2W=? O2Y=? O3W=? O3Y=? 
+true props: C1B C2W C3B 
+Amount of clauses satisfied: 30/42
+back-tracking...
+Try C3W = true
+
+C1Y=F C1W=F C1B=T C2Y=F C2W=T C2B=F C3Y=F C3W=T C3B=? L1Y=? L2Y=? L3Y=? L1W=? L2W=? L3W=? L1B=? L2B=? L3B=? O1W=? O1Y=? O2W=? O2Y=? O3W=? O3Y=? 
+true props: C1B C2W C3W 
+Amount of clauses satisfied: 26/42
+back-tracking...
+Try C3Y = true
+
+C1Y=F C1W=F C1B=T C2Y=F C2W=T C2B=F C3Y=T C3W=? C3B=? L1Y=? L2Y=? L3Y=? L1W=? L2W=? L3W=? L1B=? L2B=? L3B=? O1W=? O1Y=? O2W=? O2Y=? O3W=? O3Y=? 
+true props: C1B C2W C3Y 
+Amount of clauses satisfied: 25/42
+Try C3W = false
+
+C1Y=F C1W=F C1B=T C2Y=F C2W=T C2B=F C3Y=T C3W=F C3B=? L1Y=? L2Y=? L3Y=? L1W=? L2W=? L3W=? L1B=? L2B=? L3B=? O1W=? O1Y=? O2W=? O2Y=? O3W=? O3Y=? 
+true props: C1B C2W C3Y 
+Amount of clauses satisfied: 28/42
+Try C3B = false
+
+C1Y=F C1W=F C1B=T C2Y=F C2W=T C2B=F C3Y=T C3W=F C3B=F L1Y=? L2Y=? L3Y=? L1W=? L2W=? L3W=? L1B=? L2B=? L3B=? O1W=? O1Y=? O2W=? O2Y=? O3W=? O3Y=? 
+true props: C1B C2W C3Y 
+Amount of clauses satisfied: 31/42
+Try L1Y = false
+
+C1Y=F C1W=F C1B=T C2Y=F C2W=T C2B=F C3Y=T C3W=F C3B=F L1Y=F L2Y=? L3Y=? L1W=? L2W=? L3W=? L1B=? L2B=? L3B=? O1W=? O1Y=? O2W=? O2Y=? O3W=? O3Y=? 
+true props: C1B C2W C3Y 
+Amount of clauses satisfied: 31/42
+Try L2Y = false
+
+C1Y=F C1W=F C1B=T C2Y=F C2W=T C2B=F C3Y=T C3W=F C3B=F L1Y=F L2Y=F L3Y=? L1W=? L2W=? L3W=? L1B=? L2B=? L3B=? O1W=? O1Y=? O2W=? O2Y=? O3W=? O3Y=? 
+true props: C1B C2W C3Y 
+Amount of clauses satisfied: 31/42
+back-tracking...
+Try L2Y = true
+
+C1Y=F C1W=F C1B=T C2Y=F C2W=T C2B=F C3Y=T C3W=F C3B=F L1Y=F L2Y=T L3Y=? L1W=? L2W=? L3W=? L1B=? L2B=? L3B=? O1W=? O1Y=? O2W=? O2Y=? O3W=? O3Y=? 
+true props: C1B C2W C3Y L2Y 
+Amount of clauses satisfied: 32/42
+Try L3Y = false
+
+C1Y=F C1W=F C1B=T C2Y=F C2W=T C2B=F C3Y=T C3W=F C3B=F L1Y=F L2Y=T L3Y=F L1W=? L2W=? L3W=? L1B=? L2B=? L3B=? O1W=? O1Y=? O2W=? O2Y=? O3W=? O3Y=? 
+true props: C1B C2W C3Y L2Y 
+Amount of clauses satisfied: 33/42
+Try L1W = false
+
+C1Y=F C1W=F C1B=T C2Y=F C2W=T C2B=F C3Y=T C3W=F C3B=F L1Y=F L2Y=T L3Y=F L1W=F L2W=? L3W=? L1B=? L2B=? L3B=? O1W=? O1Y=? O2W=? O2Y=? O3W=? O3Y=? 
+true props: C1B C2W C3Y L2Y 
+Amount of clauses satisfied: 33/42
+back-tracking...
+Try L1W = true
+
+C1Y=F C1W=F C1B=T C2Y=F C2W=T C2B=F C3Y=T C3W=F C3B=F L1Y=F L2Y=T L3Y=F L1W=T L2W=? L3W=? L1B=? L2B=? L3B=? O1W=? O1Y=? O2W=? O2Y=? O3W=? O3Y=? 
+true props: C1B C2W C3Y L2Y L1W 
+Amount of clauses satisfied: 34/42
+Try L2W = false
+
+C1Y=F C1W=F C1B=T C2Y=F C2W=T C2B=F C3Y=T C3W=F C3B=F L1Y=F L2Y=T L3Y=F L1W=T L2W=F L3W=? L1B=? L2B=? L3B=? O1W=? O1Y=? O2W=? O2Y=? O3W=? O3Y=? 
+true props: C1B C2W C3Y L2Y L1W 
+Amount of clauses satisfied: 35/42
+Try L3W = false
+
+C1Y=F C1W=F C1B=T C2Y=F C2W=T C2B=F C3Y=T C3W=F C3B=F L1Y=F L2Y=T L3Y=F L1W=T L2W=F L3W=F L1B=? L2B=? L3B=? O1W=? O1Y=? O2W=? O2Y=? O3W=? O3Y=? 
+true props: C1B C2W C3Y L2Y L1W 
+Amount of clauses satisfied: 35/42
+Try L1B = false
+
+C1Y=F C1W=F C1B=T C2Y=F C2W=T C2B=F C3Y=T C3W=F C3B=F L1Y=F L2Y=T L3Y=F L1W=T L2W=F L3W=F L1B=F L2B=? L3B=? O1W=? O1Y=? O2W=? O2Y=? O3W=? O3Y=? 
+true props: C1B C2W C3Y L2Y L1W 
+Amount of clauses satisfied: 36/42
+Try L2B = false
+
+C1Y=F C1W=F C1B=T C2Y=F C2W=T C2B=F C3Y=T C3W=F C3B=F L1Y=F L2Y=T L3Y=F L1W=T L2W=F L3W=F L1B=F L2B=F L3B=? O1W=? O1Y=? O2W=? O2Y=? O3W=? O3Y=? 
+true props: C1B C2W C3Y L2Y L1W 
+Amount of clauses satisfied: 36/42
+Try L3B = false
+
+C1Y=F C1W=F C1B=T C2Y=F C2W=T C2B=F C3Y=T C3W=F C3B=F L1Y=F L2Y=T L3Y=F L1W=T L2W=F L3W=F L1B=F L2B=F L3B=F O1W=? O1Y=? O2W=? O2Y=? O3W=? O3Y=? 
+true props: C1B C2W C3Y L2Y L1W 
+Amount of clauses satisfied: 36/42
+back-tracking...
+Try L3B = true
+
+C1Y=F C1W=F C1B=T C2Y=F C2W=T C2B=F C3Y=T C3W=F C3B=F L1Y=F L2Y=T L3Y=F L1W=T L2W=F L3W=F L1B=F L2B=F L3B=T O1W=? O1Y=? O2W=? O2Y=? O3W=? O3Y=? 
+true props: C1B C2W C3Y L2Y L1W L3B 
+Amount of clauses satisfied: 37/42
+Try O1W = false
+
+C1Y=F C1W=F C1B=T C2Y=F C2W=T C2B=F C3Y=T C3W=F C3B=F L1Y=F L2Y=T L3Y=F L1W=T L2W=F L3W=F L1B=F L2B=F L3B=T O1W=F O1Y=? O2W=? O2Y=? O3W=? O3Y=? 
+true props: C1B C2W C3Y L2Y L1W L3B 
+Amount of clauses satisfied: 37/42
+Try O1Y = false
+
+C1Y=F C1W=F C1B=T C2Y=F C2W=T C2B=F C3Y=T C3W=F C3B=F L1Y=F L2Y=T L3Y=F L1W=T L2W=F L3W=F L1B=F L2B=F L3B=T O1W=F O1Y=F O2W=? O2Y=? O3W=? O3Y=? 
+true props: C1B C2W C3Y L2Y L1W L3B 
+Amount of clauses satisfied: 37/42
+back-tracking...
+Try O1Y = true
+
+C1Y=F C1W=F C1B=T C2Y=F C2W=T C2B=F C3Y=T C3W=F C3B=F L1Y=F L2Y=T L3Y=F L1W=T L2W=F L3W=F L1B=F L2B=F L3B=T O1W=F O1Y=T O2W=? O2Y=? O3W=? O3Y=? 
+true props: C1B C2W C3Y L2Y L1W L3B O1Y 
+Amount of clauses satisfied: 38/42
+Try O2W = false
+
+C1Y=F C1W=F C1B=T C2Y=F C2W=T C2B=F C3Y=T C3W=F C3B=F L1Y=F L2Y=T L3Y=F L1W=T L2W=F L3W=F L1B=F L2B=F L3B=T O1W=F O1Y=T O2W=F O2Y=? O3W=? O3Y=? 
+true props: C1B C2W C3Y L2Y L1W L3B O1Y 
+Amount of clauses satisfied: 38/42
+back-tracking...
+Try O2W = true
+
+C1Y=F C1W=F C1B=T C2Y=F C2W=T C2B=F C3Y=T C3W=F C3B=F L1Y=F L2Y=T L3Y=F L1W=T L2W=F L3W=F L1B=F L2B=F L3B=T O1W=F O1Y=T O2W=T O2Y=? O3W=? O3Y=? 
+true props: C1B C2W C3Y L2Y L1W L3B O1Y O2W 
+Amount of clauses satisfied: 39/42
+Try O2Y = false
+
+C1Y=F C1W=F C1B=T C2Y=F C2W=T C2B=F C3Y=T C3W=F C3B=F L1Y=F L2Y=T L3Y=F L1W=T L2W=F L3W=F L1B=F L2B=F L3B=T O1W=F O1Y=T O2W=T O2Y=F O3W=? O3Y=? 
+true props: C1B C2W C3Y L2Y L1W L3B O1Y O2W 
+Amount of clauses satisfied: 40/42
+Try O3W = false
+
+C1Y=F C1W=F C1B=T C2Y=F C2W=T C2B=F C3Y=T C3W=F C3B=F L1Y=F L2Y=T L3Y=F L1W=T L2W=F L3W=F L1B=F L2B=F L3B=T O1W=F O1Y=T O2W=T O2Y=F O3W=F O3Y=? 
+true props: C1B C2W C3Y L2Y L1W L3B O1Y O2W 
+Amount of clauses satisfied: 41/42
+Try O3Y = false
+
+C1Y=F C1W=F C1B=T C2Y=F C2W=T C2B=F C3Y=T C3W=F C3B=F L1Y=F L2Y=T L3Y=F L1W=T L2W=F L3W=F L1B=F L2B=F L3B=T O1W=F O1Y=T O2W=T O2Y=F O3W=F O3Y=F 
+true props: C1B C2W C3Y L2Y L1W L3B O1Y O2W 
+Amount of clauses satisfied: 41/42
+back-tracking...
+Try O3Y = true
+
+C1Y=F C1W=F C1B=T C2Y=F C2W=T C2B=F C3Y=T C3W=F C3B=F L1Y=F L2Y=T L3Y=F L1W=T L2W=F L3W=F L1B=F L2B=F L3B=T O1W=F O1Y=T O2W=T O2Y=F O3W=F O3Y=T 
+true props: C1B C2W C3Y L2Y L1W L3B O1Y O2W O3Y 
+Amount of clauses satisfied: 42/42
+
+success! found a model
+model: C1Y=F C1W=F C1B=T C2Y=F C2W=T C2B=F C3Y=T C3W=F C3B=F L1Y=F L2Y=T L3Y=F L1W=T L2W=F L3W=F L1B=F L2B=F L3B=T O1W=F O1Y=T O2W=T O2Y=F O3W=F O3Y=T 
+true props: C1B C2W C3Y L2Y L1W L3B O1Y O2W O3Y 
+DPLL_calls: 40

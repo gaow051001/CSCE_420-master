@@ -1,0 +1,466 @@
+./dpll KB/4queens.cnf -UCH
+*** DPLL ***
+0. Q11 Q21 Q31 Q41 
+1. Q12 Q22 Q32 Q42 
+2. Q13 Q23 Q33 Q43 
+3. Q14 Q24 Q34 Q44 
+4. Q11 Q12 Q13 Q14 
+5. Q21 Q22 Q23 Q24 
+6. Q31 Q32 Q33 Q34 
+7. Q41 Q42 Q43 Q44 
+8. -Q11 -Q21 
+9. -Q11 -Q31 
+10. -Q11 -Q41 
+11. -Q21 -Q31 
+12. -Q21 -Q41 
+13. -Q31 -Q41 
+14. -Q12 -Q22 
+15. -Q12 -Q32 
+16. -Q12 -Q42 
+17. -Q22 -Q32 
+18. -Q22 -Q42 
+19. -Q32 -Q42 
+20. -Q13 -Q23 
+21. -Q13 -Q33 
+22. -Q13 -Q43 
+23. -Q23 -Q33 
+24. -Q23 -Q43 
+25. -Q33 -Q43 
+26. -Q14 -Q24 
+27. -Q14 -Q34 
+28. -Q14 -Q44 
+29. -Q24 -Q34 
+30. -Q24 -Q44 
+31. -Q34 -Q44 
+32. -Q11 -Q12 
+33. -Q11 -Q13 
+34. -Q11 -Q14 
+35. -Q12 -Q13 
+36. -Q12 -Q14 
+37. -Q13 -Q14 
+38. -Q21 -Q22 
+39. -Q21 -Q23 
+40. -Q21 -Q24 
+41. -Q22 -Q23 
+42. -Q22 -Q24 
+43. -Q23 -Q24 
+44. -Q31 -Q32 
+45. -Q31 -Q33 
+46. -Q31 -Q34 
+47. -Q32 -Q33 
+48. -Q32 -Q34 
+49. -Q33 -Q34 
+50. -Q41 -Q42 
+51. -Q41 -Q43 
+52. -Q41 -Q44 
+53. -Q42 -Q43 
+54. -Q42 -Q44 
+55. -Q43 -Q44 
+56. -Q11 -Q22 
+57. -Q11 -Q33 
+58. -Q11 -Q44 
+59. -Q12 -Q21 
+60. -Q12 -Q23 
+61. -Q12 -Q34 
+62. -Q13 -Q22 
+63. -Q13 -Q24 
+64. -Q13 -Q31 
+65. -Q14 -Q23 
+66. -Q14 -Q32 
+67. -Q14 -Q41 
+68. -Q21 -Q32 
+69. -Q21 -Q43 
+70. -Q22 -Q31 
+71. -Q22 -Q33 
+72. -Q22 -Q44 
+73. -Q23 -Q32 
+74. -Q23 -Q34 
+75. -Q23 -Q41 
+76. -Q24 -Q33 
+77. -Q24 -Q42 
+78. -Q31 -Q42 
+79. -Q32 -Q41 
+80. -Q32 -Q43 
+81. -Q33 -Q42 
+82. -Q33 -Q44 
+83. -Q34 -Q43 
+...tracing info...
+
+Running without Unit Clause Heuristic
+
+Q11=? Q21=? Q31=? Q41=? Q12=? Q22=? Q32=? Q42=? Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: 
+Amount of clauses satisfied: 0/84
+Try Q11 = false
+
+Q11=F Q21=? Q31=? Q41=? Q12=? Q22=? Q32=? Q42=? Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: 
+Amount of clauses satisfied: 9/84
+Try Q21 = false
+
+Q11=F Q21=F Q31=? Q41=? Q12=? Q22=? Q32=? Q42=? Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: 
+Amount of clauses satisfied: 17/84
+Try Q31 = false
+
+Q11=F Q21=F Q31=F Q41=? Q12=? Q22=? Q32=? Q42=? Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: 
+Amount of clauses satisfied: 24/84
+Try Q41 = false
+
+Q11=F Q21=F Q31=F Q41=F Q12=? Q22=? Q32=? Q42=? Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: 
+Amount of clauses satisfied: 30/84
+back-tracking...
+Try Q41 = true
+
+Q11=F Q21=F Q31=F Q41=T Q12=? Q22=? Q32=? Q42=? Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 
+Amount of clauses satisfied: 26/84
+Try Q12 = false
+
+Q11=F Q21=F Q31=F Q41=T Q12=F Q22=? Q32=? Q42=? Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 
+Amount of clauses satisfied: 33/84
+Try Q22 = false
+
+Q11=F Q21=F Q31=F Q41=T Q12=F Q22=F Q32=? Q42=? Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 
+Amount of clauses satisfied: 40/84
+Try Q32 = false
+
+Q11=F Q21=F Q31=F Q41=T Q12=F Q22=F Q32=F Q42=? Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 
+Amount of clauses satisfied: 47/84
+Try Q42 = false
+
+Q11=F Q21=F Q31=F Q41=T Q12=F Q22=F Q32=F Q42=F Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 
+Amount of clauses satisfied: 52/84
+back-tracking...
+Try Q42 = true
+
+Q11=F Q21=F Q31=F Q41=T Q12=F Q22=F Q32=F Q42=T Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 Q42 
+Amount of clauses satisfied: 48/84
+back-tracking...
+Try Q32 = true
+
+Q11=F Q21=F Q31=F Q41=T Q12=F Q22=F Q32=T Q42=? Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 Q32 
+Amount of clauses satisfied: 42/84
+back-tracking...
+Try Q22 = true
+
+Q11=F Q21=F Q31=F Q41=T Q12=F Q22=T Q32=? Q42=? Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 Q22 
+Amount of clauses satisfied: 35/84
+Try Q32 = false
+
+Q11=F Q21=F Q31=F Q41=T Q12=F Q22=T Q32=F Q42=? Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 Q22 
+Amount of clauses satisfied: 43/84
+Try Q42 = false
+
+Q11=F Q21=F Q31=F Q41=T Q12=F Q22=T Q32=F Q42=F Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 Q22 
+Amount of clauses satisfied: 49/84
+Try Q13 = false
+
+Q11=F Q21=F Q31=F Q41=T Q12=F Q22=T Q32=F Q42=F Q13=F Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 Q22 
+Amount of clauses satisfied: 55/84
+Try Q23 = false
+
+Q11=F Q21=F Q31=F Q41=T Q12=F Q22=T Q32=F Q42=F Q13=F Q23=F Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 Q22 
+Amount of clauses satisfied: 62/84
+Try Q33 = false
+
+Q11=F Q21=F Q31=F Q41=T Q12=F Q22=T Q32=F Q42=F Q13=F Q23=F Q33=F Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 Q22 
+Amount of clauses satisfied: 67/84
+Try Q43 = false
+
+Q11=F Q21=F Q31=F Q41=T Q12=F Q22=T Q32=F Q42=F Q13=F Q23=F Q33=F Q43=F Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 Q22 
+Amount of clauses satisfied: 70/84
+back-tracking...
+Try Q43 = true
+
+Q11=F Q21=F Q31=F Q41=T Q12=F Q22=T Q32=F Q42=F Q13=F Q23=F Q33=F Q43=T Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 Q22 Q43 
+Amount of clauses satisfied: 68/84
+back-tracking...
+Try Q33 = true
+
+Q11=F Q21=F Q31=F Q41=T Q12=F Q22=T Q32=F Q42=F Q13=F Q23=F Q33=T Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 Q22 Q33 
+Amount of clauses satisfied: 64/84
+back-tracking...
+Try Q23 = true
+
+Q11=F Q21=F Q31=F Q41=T Q12=F Q22=T Q32=F Q42=F Q13=F Q23=T Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 Q22 Q23 
+Amount of clauses satisfied: 56/84
+back-tracking...
+Try Q13 = true
+
+Q11=F Q21=F Q31=F Q41=T Q12=F Q22=T Q32=F Q42=F Q13=T Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 Q22 Q13 
+Amount of clauses satisfied: 51/84
+back-tracking...
+Try Q42 = true
+
+Q11=F Q21=F Q31=F Q41=T Q12=F Q22=T Q32=F Q42=T Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 Q22 Q42 
+Amount of clauses satisfied: 43/84
+back-tracking...
+Try Q32 = true
+
+Q11=F Q21=F Q31=F Q41=T Q12=F Q22=T Q32=T Q42=? Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 Q22 Q32 
+Amount of clauses satisfied: 36/84
+back-tracking...
+Try Q12 = true
+
+Q11=F Q21=F Q31=F Q41=T Q12=T Q22=? Q32=? Q42=? Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 Q12 
+Amount of clauses satisfied: 28/84
+Try Q22 = false
+
+Q11=F Q21=F Q31=F Q41=T Q12=T Q22=F Q32=? Q42=? Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 Q12 
+Amount of clauses satisfied: 36/84
+Try Q32 = false
+
+Q11=F Q21=F Q31=F Q41=T Q12=T Q22=F Q32=F Q42=? Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 Q12 
+Amount of clauses satisfied: 44/84
+Try Q42 = false
+
+Q11=F Q21=F Q31=F Q41=T Q12=T Q22=F Q32=F Q42=F Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 Q12 
+Amount of clauses satisfied: 50/84
+Try Q13 = false
+
+Q11=F Q21=F Q31=F Q41=T Q12=T Q22=F Q32=F Q42=F Q13=F Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 Q12 
+Amount of clauses satisfied: 56/84
+Try Q23 = false
+
+Q11=F Q21=F Q31=F Q41=T Q12=T Q22=F Q32=F Q42=F Q13=F Q23=F Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 Q12 
+Amount of clauses satisfied: 63/84
+Try Q33 = false
+
+Q11=F Q21=F Q31=F Q41=T Q12=T Q22=F Q32=F Q42=F Q13=F Q23=F Q33=F Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 Q12 
+Amount of clauses satisfied: 67/84
+Try Q43 = false
+
+Q11=F Q21=F Q31=F Q41=T Q12=T Q22=F Q32=F Q42=F Q13=F Q23=F Q33=F Q43=F Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 Q12 
+Amount of clauses satisfied: 70/84
+back-tracking...
+Try Q43 = true
+
+Q11=F Q21=F Q31=F Q41=T Q12=T Q22=F Q32=F Q42=F Q13=F Q23=F Q33=F Q43=T Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 Q12 Q43 
+Amount of clauses satisfied: 68/84
+back-tracking...
+Try Q33 = true
+
+Q11=F Q21=F Q31=F Q41=T Q12=T Q22=F Q32=F Q42=F Q13=F Q23=F Q33=T Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 Q12 Q33 
+Amount of clauses satisfied: 65/84
+Try Q43 = false
+
+Q11=F Q21=F Q31=F Q41=T Q12=T Q22=F Q32=F Q42=F Q13=F Q23=F Q33=T Q43=F Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 Q12 Q33 
+Amount of clauses satisfied: 69/84
+Try Q14 = false
+
+Q11=F Q21=F Q31=F Q41=T Q12=T Q22=F Q32=F Q42=F Q13=F Q23=F Q33=T Q43=F Q14=F Q24=? Q34=? Q44=? 
+true props: Q41 Q12 Q33 
+Amount of clauses satisfied: 74/84
+Try Q24 = false
+
+Q11=F Q21=F Q31=F Q41=T Q12=T Q22=F Q32=F Q42=F Q13=F Q23=F Q33=T Q43=F Q14=F Q24=F Q34=? Q44=? 
+true props: Q41 Q12 Q33 
+Amount of clauses satisfied: 77/84
+back-tracking...
+Try Q24 = true
+
+Q11=F Q21=F Q31=F Q41=T Q12=T Q22=F Q32=F Q42=F Q13=F Q23=F Q33=T Q43=F Q14=F Q24=T Q34=? Q44=? 
+true props: Q41 Q12 Q33 Q24 
+Amount of clauses satisfied: 76/84
+back-tracking...
+Try Q14 = true
+
+Q11=F Q21=F Q31=F Q41=T Q12=T Q22=F Q32=F Q42=F Q13=F Q23=F Q33=T Q43=F Q14=T Q24=? Q34=? Q44=? 
+true props: Q41 Q12 Q33 Q14 
+Amount of clauses satisfied: 70/84
+back-tracking...
+Try Q43 = true
+
+Q11=F Q21=F Q31=F Q41=T Q12=T Q22=F Q32=F Q42=F Q13=F Q23=F Q33=T Q43=T Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 Q12 Q33 Q43 
+Amount of clauses satisfied: 65/84
+back-tracking...
+Try Q23 = true
+
+Q11=F Q21=F Q31=F Q41=T Q12=T Q22=F Q32=F Q42=F Q13=F Q23=T Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 Q12 Q23 
+Amount of clauses satisfied: 58/84
+back-tracking...
+Try Q13 = true
+
+Q11=F Q21=F Q31=F Q41=T Q12=T Q22=F Q32=F Q42=F Q13=T Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 Q12 Q13 
+Amount of clauses satisfied: 51/84
+back-tracking...
+Try Q42 = true
+
+Q11=F Q21=F Q31=F Q41=T Q12=T Q22=F Q32=F Q42=T Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 Q12 Q42 
+Amount of clauses satisfied: 44/84
+back-tracking...
+Try Q32 = true
+
+Q11=F Q21=F Q31=F Q41=T Q12=T Q22=F Q32=T Q42=? Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 Q12 Q32 
+Amount of clauses satisfied: 37/84
+back-tracking...
+Try Q22 = true
+
+Q11=F Q21=F Q31=F Q41=T Q12=T Q22=T Q32=? Q42=? Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q41 Q12 Q22 
+Amount of clauses satisfied: 29/84
+back-tracking...
+Try Q31 = true
+
+Q11=F Q21=F Q31=T Q41=? Q12=? Q22=? Q32=? Q42=? Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q31 
+Amount of clauses satisfied: 19/84
+Try Q41 = false
+
+Q11=F Q21=F Q31=T Q41=F Q12=? Q22=? Q32=? Q42=? Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q31 
+Amount of clauses satisfied: 26/84
+Try Q12 = false
+
+Q11=F Q21=F Q31=T Q41=F Q12=F Q22=? Q32=? Q42=? Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q31 
+Amount of clauses satisfied: 33/84
+Try Q22 = false
+
+Q11=F Q21=F Q31=T Q41=F Q12=F Q22=F Q32=? Q42=? Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q31 
+Amount of clauses satisfied: 41/84
+Try Q32 = false
+
+Q11=F Q21=F Q31=T Q41=F Q12=F Q22=F Q32=F Q42=? Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q31 
+Amount of clauses satisfied: 48/84
+Try Q42 = false
+
+Q11=F Q21=F Q31=T Q41=F Q12=F Q22=F Q32=F Q42=F Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q31 
+Amount of clauses satisfied: 53/84
+back-tracking...
+Try Q42 = true
+
+Q11=F Q21=F Q31=T Q41=F Q12=F Q22=F Q32=F Q42=T Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q31 Q42 
+Amount of clauses satisfied: 50/84
+back-tracking...
+Try Q32 = true
+
+Q11=F Q21=F Q31=T Q41=F Q12=F Q22=F Q32=T Q42=? Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q31 Q32 
+Amount of clauses satisfied: 42/84
+back-tracking...
+Try Q22 = true
+
+Q11=F Q21=F Q31=T Q41=F Q12=F Q22=T Q32=? Q42=? Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q31 Q22 
+Amount of clauses satisfied: 35/84
+back-tracking...
+Try Q12 = true
+
+Q11=F Q21=F Q31=T Q41=F Q12=T Q22=? Q32=? Q42=? Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q31 Q12 
+Amount of clauses satisfied: 28/84
+Try Q22 = false
+
+Q11=F Q21=F Q31=T Q41=F Q12=T Q22=F Q32=? Q42=? Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q31 Q12 
+Amount of clauses satisfied: 37/84
+Try Q32 = false
+
+Q11=F Q21=F Q31=T Q41=F Q12=T Q22=F Q32=F Q42=? Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q31 Q12 
+Amount of clauses satisfied: 45/84
+Try Q42 = false
+
+Q11=F Q21=F Q31=T Q41=F Q12=T Q22=F Q32=F Q42=F Q13=? Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q31 Q12 
+Amount of clauses satisfied: 51/84
+Try Q13 = false
+
+Q11=F Q21=F Q31=T Q41=F Q12=T Q22=F Q32=F Q42=F Q13=F Q23=? Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q31 Q12 
+Amount of clauses satisfied: 58/84
+Try Q23 = false
+
+Q11=F Q21=F Q31=T Q41=F Q12=T Q22=F Q32=F Q42=F Q13=F Q23=F Q33=? Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q31 Q12 
+Amount of clauses satisfied: 64/84
+Try Q33 = false
+
+Q11=F Q21=F Q31=T Q41=F Q12=T Q22=F Q32=F Q42=F Q13=F Q23=F Q33=F Q43=? Q14=? Q24=? Q34=? Q44=? 
+true props: Q31 Q12 
+Amount of clauses satisfied: 69/84
+Try Q43 = false
+
+Q11=F Q21=F Q31=T Q41=F Q12=T Q22=F Q32=F Q42=F Q13=F Q23=F Q33=F Q43=F Q14=? Q24=? Q34=? Q44=? 
+true props: Q31 Q12 
+Amount of clauses satisfied: 71/84
+back-tracking...
+Try Q43 = true
+
+Q11=F Q21=F Q31=T Q41=F Q12=T Q22=F Q32=F Q42=F Q13=F Q23=F Q33=F Q43=T Q14=? Q24=? Q34=? Q44=? 
+true props: Q31 Q12 Q43 
+Amount of clauses satisfied: 71/84
+Try Q14 = false
+
+Q11=F Q21=F Q31=T Q41=F Q12=T Q22=F Q32=F Q42=F Q13=F Q23=F Q33=F Q43=T Q14=F Q24=? Q34=? Q44=? 
+true props: Q31 Q12 Q43 
+Amount of clauses satisfied: 75/84
+Try Q24 = false
+
+Q11=F Q21=F Q31=T Q41=F Q12=T Q22=F Q32=F Q42=F Q13=F Q23=F Q33=F Q43=T Q14=F Q24=F Q34=? Q44=? 
+true props: Q31 Q12 Q43 
+Amount of clauses satisfied: 77/84
+back-tracking...
+Try Q24 = true
+
+Q11=F Q21=F Q31=T Q41=F Q12=T Q22=F Q32=F Q42=F Q13=F Q23=F Q33=F Q43=T Q14=F Q24=T Q34=? Q44=? 
+true props: Q31 Q12 Q43 Q24 
+Amount of clauses satisfied: 77/84
+Try Q34 = false
+
+Q11=F Q21=F Q31=T Q41=F Q12=T Q22=F Q32=F Q42=F Q13=F Q23=F Q33=F Q43=T Q14=F Q24=T Q34=F Q44=? 
+true props: Q31 Q12 Q43 Q24 
+Amount of clauses satisfied: 82/84
+Try Q44 = false
+
+Q11=F Q21=F Q31=T Q41=F Q12=T Q22=F Q32=F Q42=F Q13=F Q23=F Q33=F Q43=T Q14=F Q24=T Q34=F Q44=F 
+true props: Q31 Q12 Q43 Q24 
+Amount of clauses satisfied: 84/84
+
+success! found a model
+model: Q11=F Q21=F Q31=T Q41=F Q12=T Q22=F Q32=F Q42=F Q13=F Q23=F Q33=F Q43=T Q14=F Q24=T Q34=F Q44=F 
+true props: Q31 Q12 Q43 Q24 
+DPLL_calls: 69

@@ -1,0 +1,125 @@
+Summary Table
+        withUCH     withoutUCH
+N = 4     33            69
+
+N = 6     132           459
+
+N = 8     388           2469
+
+
+
+
+
+
+
+
+
+./dpll KB/Sammy.CNF.txt
+*** DPLL ***
+Running with Unit Clause Heuristic
+success! found a model
+model: C1Y=F C1W=F C1B=T C2Y=F C2W=T C2B=F C3Y=T C3W=F C3B=F L1Y=? L2Y=T L3Y=F L1W=T L2W=F L3W=? L1B=F L2B=? L3B=T O1W=? O1Y=T O2W=T O2Y=F O3W=F O3Y=T 
+true props: C1B C2W C3Y L2Y L1W L3B O1Y O2W O3Y 
+DPLL_calls: 21
+
+./dpll KB/Sammy.CNF.txt -UCH
+*** DPLL ***
+Running without Unit Clause Heuristic
+success! found a model
+model: C1Y=F C1W=F C1B=T C2Y=F C2W=T C2B=F C3Y=T C3W=F C3B=F L1Y=F L2Y=T L3Y=F L1W=T L2W=F L3W=F L1B=F L2B=F L3B=T O1W=F O1Y=T O2W=T O2Y=F O3W=F O3Y=T 
+true props: C1B C2W C3Y L2Y L1W L3B O1Y O2W O3Y 
+DPLL_calls: 40
+
+./dpll KB/mapcolor.cnf
+*** DPLL ***
+Running with Unit Clause Heuristic
+success! found a model
+model: WAR=F WAG=F WAB=T NTR=F NTG=T NTB=F SAR=T SAG=F SAB=F QR=F QG=F QB=T NSWR=F NSWG=T NSWB=F VR=F VG=F VB=T TR=F TG=F TB=T 
+true props: WAB NTG SAR QB NSWG VB TB 
+DPLL_calls: 22
+
+./dpll KB/mapcolor.cnf -UCH
+*** DPLL ***
+Running without Unit Clause Heuristic
+success! found a model
+model: WAR=F WAG=F WAB=T NTR=F NTG=T NTB=F SAR=T SAG=F SAB=F QR=F QG=F QB=T NSWR=F NSWG=T NSWB=F VR=F VG=F VB=T TR=F TG=F TB=T 
+true props: WAB NTG SAR QB NSWG VB TB 
+DPLL_calls: 37
+
+./dpll KB/mapcolor2.cnf
+*** DPLL ***
+Running with Unit Clause Heuristic
+success! found a model
+model: WAR=F WAG=T WAB=F NTR=F NTG=F NTB=T SAR=T SAG=F SAB=F QR=F QG=T QB=F NSWR=F NSWG=F NSWB=T VR=F VG=T VB=F TR=F TG=F TB=T 
+true props: WAG NTB SAR QG NSWB VG TB 
+DPLL_calls: 28
+
+./dpll KB/mapcolor2.cnf -UCH
+*** DPLL ***
+Running without Unit Clause Heuristic
+success! found a model
+model: WAR=F WAG=T WAB=F NTR=F NTG=F NTB=T SAR=T SAG=F SAB=F QR=F QG=T QB=F NSWR=F NSWG=F NSWB=T VR=F VG=T VB=F TR=F TG=F TB=T 
+true props: WAG NTB SAR QG NSWB VG TB 
+DPLL_calls: 75
+
+./dpll KB/3queens.cnf
+*** DPLL ***
+Running with Unit Clause Heuristic
+failure! could not find a model
+DPLL_calls: 23
+Unsatisfiable Model
+
+./dpll KB/3queens.cnf -UCH
+*** DPLL ***
+Running without Unit Clause Heuristic
+failure! could not find a model
+DPLL_calls: 43
+Unsatisfiable Model
+
+./dpll KB/4queens.cnf
+*** DPLL ***
+Running with Unit Clause Heuristic
+success! found a model
+model: Q11=F Q21=F Q31=T Q41=F Q12=T Q22=F Q32=F Q42=F Q13=F Q23=F Q33=F Q43=T Q14=F Q24=T Q34=F Q44=F 
+true props: Q31 Q12 Q43 Q24 
+DPLL_calls: 33
+
+./dpll KB/4queens.cnf -UCH
+*** DPLL ***
+Running without Unit Clause Heuristic
+success! found a model
+model: Q11=F Q21=F Q31=T Q41=F Q12=T Q22=F Q32=F Q42=F Q13=F Q23=F Q33=F Q43=T Q14=F Q24=T Q34=F Q44=F 
+true props: Q31 Q12 Q43 Q24 
+DPLL_calls: 69
+
+./dpll KB/6queens.cnf
+*** DPLL ***
+Running with Unit Clause Heuristic
+success! found a model
+model: Q11=F Q21=F Q31=F Q41=F Q51=T Q61=F Q12=F Q22=F Q32=T Q42=F Q52=F Q62=F Q13=T Q23=F Q33=F Q43=F Q53=F Q63=F Q14=F Q24=F Q34=F Q44=F Q54=F Q64=T Q15=F Q25=F Q35=F Q45=T Q55=F Q65=F Q16=F Q26=T Q36=F Q46=F Q56=F Q66=F 
+true props: Q51 Q32 Q13 Q64 Q45 Q26 
+DPLL_calls: 132
+
+./dpll KB/6queens.cnf -UCH
+*** DPLL ***
+Running without Unit Clause Heuristic
+success! found a model
+model: Q11=F Q21=F Q31=F Q41=F Q51=T Q61=F Q12=F Q22=F Q32=T Q42=F Q52=F Q62=F Q13=T Q23=F Q33=F Q43=F Q53=F Q63=F Q14=F Q24=F Q34=F Q44=F Q54=F Q64=T Q15=F Q25=F Q35=F Q45=T Q55=F Q65=F Q16=F Q26=T Q36=F Q46=F Q56=F Q66=F 
+true props: Q51 Q32 Q13 Q64 Q45 Q26 
+DPLL_calls: 459
+
+./dpll KB/8queens.cnf
+*** DPLL ***
+Running with Unit Clause Heuristic
+success! found a model
+model: Q11=F Q21=F Q31=F Q41=F Q51=F Q61=F Q71=F Q81=T Q12=F Q22=F Q32=F Q42=T Q52=F Q62=F Q72=F Q82=F Q13=T Q23=F Q33=F Q43=F Q53=F Q63=F Q73=F Q83=F Q14=F Q24=F Q34=T Q44=F Q54=F Q64=F Q74=F Q84=F Q15=F Q25=F Q35=F Q45=F Q55=F Q65=T Q75=F Q85=F Q16=F Q26=T Q36=F Q46=F Q56=F Q66=F Q76=F Q86=F Q17=F Q27=F Q37=F Q47=F Q57=F Q67=F Q77=T Q87=F Q18=F Q28=F Q38=F Q48=F Q58=T Q68=F Q78=F Q88=F 
+true props: Q81 Q42 Q13 Q34 Q65 Q26 Q77 Q58 
+DPLL_calls: 388
+
+./dpll KB/8queens.cnf -UCH
+*** DPLL ***
+Running without Unit Clause Heuristic
+success! found a model
+model: Q11=F Q21=F Q31=F Q41=F Q51=F Q61=F Q71=F Q81=T Q12=F Q22=F Q32=F Q42=T Q52=F Q62=F Q72=F Q82=F Q13=T Q23=F Q33=F Q43=F Q53=F Q63=F Q73=F Q83=F Q14=F Q24=F Q34=T Q44=F Q54=F Q64=F Q74=F Q84=F Q15=F Q25=F Q35=F Q45=F Q55=F Q65=T Q75=F Q85=F Q16=F Q26=T Q36=F Q46=F Q56=F Q66=F Q76=F Q86=F Q17=F Q27=F Q37=F Q47=F Q57=F Q67=F Q77=T Q87=F Q18=F Q28=F Q38=F Q48=F Q58=T Q68=F Q78=F Q88=F 
+true props: Q81 Q42 Q13 Q34 Q65 Q26 Q77 Q58 
+DPLL_calls: 2469

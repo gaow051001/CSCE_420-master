@@ -1,0 +1,44 @@
+#South Australia
+SAR SAG SAB
+-SAR -WAR
+-SAR -NTR
+-SAR -QR
+-SAR -NSWR
+-SAR -VR
+-SAG -WAG
+-SAG -NTG
+-SAG -QG
+-SAG -NSWG
+-SAG -VG
+-SAB -WAG
+-SAB -NTG
+-SAB -QG
+-SAB -NSWG
+-SAB -VG
+#Western Australia
+WAR WAG WAB
+-WAR -NTR
+-WAG -NTG
+-WAB -NTB
+#Northern Territory
+NTR NTG NTB
+-NTR -QR
+-NTG -QG
+-NTB -QB
+#Queensland
+QR QG QB
+-QR -NSWR
+-QG -NSWG
+-QB -NSWB
+#New South Wales
+NSWR NSWG NSWB
+-NSWR -VR
+-NSWG -VG
+-NSWB -VB
+#Victoria
+VR VG VB
+#Tasmania
+TR TG TB
+-TR -TG
+-TR -TB
+-TB -TG

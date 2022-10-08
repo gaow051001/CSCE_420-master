@@ -1,0 +1,59 @@
+5 10 7
+>>>>>>>>>>
+AE
+CF
+D
+GHIJ
+B
+>>>>>>>>>>
+AEG
+CFI
+DJB
+
+H
+>>>>>>>>>>
+
+Success! iteration=4, cost=5, depth=5, max queue size=60
+move 0, pathcost=0, heuristic=1, f(n) = g(n) + h(n) =10     
+AE
+CF
+D
+GHIJ
+B
+>>>>>>>>>>>>>>>
+move 1, pathcost=1, heuristic=1, f(n) = g(n) + h(n) =9      
+AE
+CF
+DJ
+GHI
+B
+>>>>>>>>>>>>>>>
+move 2, pathcost=2, heuristic=1, f(n) = g(n) + h(n) =8      
+AE
+CFI
+DJ
+GH
+B
+>>>>>>>>>>>>>>>
+move 3, pathcost=3, heuristic=1, f(n) = g(n) + h(n) =7      
+AE
+CFI
+DJB
+GH
+
+>>>>>>>>>>>>>>>
+move 4, pathcost=4, heuristic=1, f(n) = g(n) + h(n) =6      
+AE
+CFI
+DJB
+G
+H
+>>>>>>>>>>>>>>>
+move 5, pathcost=5, heuristic=1, f(n) = g(n) + h(n) =5      
+AEG
+CFI
+DJB
+
+H
+>>>>>>>>>>>>>>>
+statistics: probs\probB05.bwp method Astar H1 planlen 5 iter 4 maxq 60
